@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>我的好友</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="register_box fri-top">
+		<div class="head">
+			<a href="index.html" class="back_btn"></a>
+			<p>全部好友</p>
+			<a href="javascript:;" class="menu" key="0"><i></i></a>
+			<ul class="box">
+				<li><a href="fri-add.html" class="fri-add">添加好友</a></li>
+				<li><a href="fri-mess.html" class="fri-mess">消息列表<i></i></a></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- list -->
+	<section class="fri-list self-menu">
+		<ul>
+			<li><a href="javascript:;"><span class="name">我的好友</span>(<span class="num">13</span>)<i></i></a><i class="del">删除</i></li>
+			<li class="under"><a href="javascript:;"><span class="name">.</span>(<span class="num">0</span>)<i></i></a><i class="del">删除</i></li>
+			<li><a href="fri-list.html"><span class="name">家人</span>(<span class="num">6</span>)<i></i></a><i class="del">删除</i></li>
+		</ul>
+	</section>
+
+	<footer>
+		<div class="footer">
+			<a href="javascript:;" class="login_btn fl delZ">删除分组</a>
+			<a href="javascript:;" class="login_btn fr addZ">添加分组</a>
+			<a href="javascript:;" class="login_btn fl quit">取消</a>
+		</div>
+	</footer>
+
+	<!-- 分组 -->
+	<section class="window">
+		<section class="login_box register_box">
+			<div class="head">
+				<a href="javascript:;" class="back_btn cancel"></a>
+				<p>添加分组</p>
+			</div>
+		</section>
+		<section class="addFri">
+			<form action="javascript:;">
+				<div class="input">
+					<input type="text" name="name" placeholder="分组名">
+				</div>
+			</form>
+		</section>
+
+		<footer class="addFri-foot">
+			<div class="footer">
+				<a href="javascript:;" class="cancel">取消</a>
+				<a href="javascript:;" class="login_btn sure">确定</a>
+			</div>
+		</footer>
+	</section>
+
+	<div class="fri-shadow"></div>
+</body>
+<script type="text/javascript">
+	// menu
+	$('.menu').click(function(){
+		if($(this).attr('key') == 0){
+			$(this).attr('key', '1');
+			$(this).next().show();
+		}else{
+			$(this).attr('key', '0');
+			$(this).next().hide();
+		}
+
+	});
+
+	// 删除分组
+	$('.delZ').click(function(){
+		// 显示删除icon
+		$('.del').css({'display': 'inline-block'});
+		$('.del').addClass('on');
+
+		// 打开遮罩
+		$('.fri-shadow').show();
+
+		// 隐藏按键
+		$(this).siblings('.addZ').hide();
+		$(this).hide();
+		$(this).siblings('.quit').show()
+	});
+	$('.quit').click(function(){
+		// 隐藏删除icon
+		$(this).siblings().show();
+		$(this).hide();
+		$('.fri-shadow').hide();
+		// 显示按键
+		$('.del').removeClass('on');
+	});
+	// 删除事件
+	$('.del').click(function(){
+		var that = $(this);
+		layer.open({
+			type: 1,
+			btn: ['确定', '取消'],
+			content: '删除该组将与该组好友一并删除，是否确认删除?',
+			yes: function(index){
+				that.parent().remove();
+				layer.close(index);
+			}
+		});
+	});
+
+	// 添加分组
+	$('.addZ').click(function(){
+		// 显示弹出层
+		$('.window').addClass('on');
+		// 清空表单
+		$('input').val('');
+	});
+
+	// 弹窗消失
+	$('.cancel').click(function(){
+		$('.window').removeClass('on');
+	});
+
+	// 确认添加分组
+	$('.sure').click(function(){
+		var name = $('[name="name"]').val();
+		var result = searchFiles($('.fri-list ul li'), 'name', name);
+		// 判断是否重名
+		if(!result.exist){
+			// 重名
+			layer.open({
+				skin: 'msg',
+				content: '重复命名，重新输入',
+				time: 2
+			})
+		}else if(name == ''){
+			// 名字为空时
+		}else{
+			// 可添加
+			var li_clone = $('.under').clone(true).removeClass('under');
+			li_clone.find('.name').text(name);
+			$('.fri-list ul').append(li_clone);
+			$('.window').removeClass('on');
+		}
+	});
+</script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>个人中心-修改密码</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="register_box">
+		<div class="head">
+			<a href="self-reset.html" class="back_btn"></a>
+			<p>会员名称</p>
+		</div>
+	</section>
+
+	<!-- reset -->
+	<section class="self-name self-reset">
+		<div class="con">
+			<div class="head">
+				<div class="step">1</div>
+				<p>密保问题</p>
+			</div>
+			<section class="form">
+				<form action="javascript:;">
+					<table>
+						<tr>
+							<td><p>设置新密码：</p></td>
+							<td><input type="password" name="password_null" placeholder="请输入新密码"></td>
+						</tr>
+						<tr>
+							<td><p></p></td>
+							<td><div class="error">
+								<span class="tip">首位字母+数字/字母，至少6位</span>
+								<span class="password-error">新密码输入有误，请重新输入</span>
+							</div></td>
+						</tr>
+						<tr>
+							<td><p>确认新密码：</p></td>
+							<td><input type="password" name="password_alike" placeholder="请确认密码"></td>
+						</tr>
+						<tr>
+							<td><p></p></td>
+							<td><div class="error"><span class="password_alike-error">两次密码输入不一致，请重新输入</span></div></td>
+						</tr>
+					</table>
+					<a href="javascript:;" class="login_btn">下一步</a>
+				</form>
+			</section>
+		</div>
+	</section>
+</body>
+<script type="text/javascript">
+	// 当值发生变化后错误提示消失
+		$('[name="password_null"]').on('input', function(){
+			$('.password-error').siblings().show();
+			$('.password-error').hide();
+			$('[name="password_null"]').removeClass('error-border');
+		});
+		$('[name="password_alike"]').on('input', function(){
+			$('.password_alike-error').siblings().show();
+			$('.password_alike-error').hide();
+			$('[name="password_alike"]').removeClass('error-border');
+		});
+
+	$('.login_btn').click(function(){
+
+		// 验证密码
+		if(!$('[name="password_null"]').check_password()){
+			$('.password-error').siblings().hide();
+			$('.password-error').show();
+			$('[name="password_null"]').addClass('error-border');
+		}else{
+			$('.password-error').siblings().show();
+			$('.password-error').hide();
+			$('[name="password_null"]').removeClass('error-border');
+		}
+
+		// 确认密码
+		if(!$('[name="password_alike"]').check_password_alike('[name="password_null"]')){
+			$('.password_alike-error').show();
+			$('[name="password_alike"]').addClass('error-border');
+		}else{
+			$('.password_alike-error').hide();
+			$('[name="password_alike"]').removeClass('error-border');
+		}
+	});
+
+	// 确认密码
+	$('[name="password_alike"]').blur(function(){
+		if(!$('[name="password_alike"]').check_password_alike('[name="password_null"]')){
+			$('.password_alike-error').show();
+			$('[name="password_alike"]').addClass('error-border');
+		}else{
+			$('.password_alike-error').hide();
+			$('[name="password_alike"]').removeClass('error-border');
+		}
+	});
+</script>
+</html>

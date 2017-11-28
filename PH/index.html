@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>首页</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="con">
+				<div class="logout"><a href="javascript:;">退出登录</a></div>
+			<div class="box">
+				<div class="img"><img src="images/user.png"></div>
+				<div class="name">毛的树叶</div>
+				<div class="text">关注生活，热爱生活，分享生活中的美好，时刻分享，时刻分享</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="index_box">
+		<div class="con">
+			<ul>
+				<li>
+					<a href="photoShow.html" class="box">
+						<div class="img"><img src="images/show_img.png"></div>
+						<p class="stit">相册展示</p>
+					</a>
+				</li>
+				<li>
+					<a href="ptColl.html" class="box">
+						<div class="img"><img src="images/cloud_img.png"></div>
+						<p class="stit">相册存放</p>
+					</a>
+				</li>
+				<li>
+					<a href="friend.html" class="box">
+						<div class="img"><img src="images/friend_img.png"></div>
+						<p class="stit">我的好友</p>
+					</a>
+				</li>
+				<li>
+					<a href="self.html" class="box">
+						<div class="img"><img src="images/index_img.png"></div>
+						<p class="stit">个人中心</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$('.logout a').click(function(){
+		layer.open({
+			type: 1,
+			btn: ['确定', '取消'],
+			content: '是否确认退出?',
+			yes: function(index){
+				window.location = './login.html';
+				layer.close(index);
+			}
+		})
+	})
+</script>
+</html>

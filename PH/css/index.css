@@ -1,0 +1,1825 @@
+/*
+ *
+ * 		title:	相册移动端样式
+ * 		time: 	09-18
+ * 		author: Li
+ *
+ */
+
+
+img{
+	display: block;
+}
+.error-border{
+	border-color: red!important;
+}
+.question-error{
+	display: none;
+}
+
+/* --------------------------- */
+.tit{
+	height: auto;
+	width: 100%;
+	position: relative;
+}
+.tit img{
+    height: 24rem;
+}
+.tit p{
+	position: absolute;
+    width: 25rem;
+    height: 0;
+    line-height: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #fff;
+    padding: 1.25rem 0;
+}
+
+.login_box .head{
+	font-size: 0;
+	background: #eee;
+}
+.login_box .head a{
+	width: 50%;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #999;
+    position: relative;
+    padding: 2.1rem 0;
+    line-height: 0;
+    height: 0;
+}
+.login_box .head a:after{
+	content: "";
+	position: absolute;
+	border: 1rem solid transparent;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 0;
+	margin: auto;
+}
+.login_box .head .on{
+	color: #60a5e8;
+}
+.login_box .head .on:after{
+	border-bottom-color: #fff;
+}
+.login_box .form{
+	padding-top: 3.5rem;
+}
+.login_box .form section{
+	position: relative;
+}
+.login_box .input{
+	border: 1px solid #bfbfbf;
+	padding: 1rem;
+}
+.login_box .form .input i{
+	display: inline-block;
+    width: 5%;
+    vertical-align: middle;
+}
+.login_box .input input{
+	border: 0;
+    padding: 0;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    color: #555;
+    width: 95%;
+    vertical-align: middle;
+    padding-left: 1rem;
+}
+input::placeholder{
+	color: #999;
+}
+.login_box .form .error{
+	height: 3rem;
+	line-height: 3rem;
+}
+.error span{
+	color: red;
+    padding-left: 2rem;
+    background: url(../images/error_icon.png) no-repeat left center;
+    background-size: 1.2rem;
+    font-size: 1.2rem;
+}
+.forget_pwd_btn{
+	position: absolute;
+	right: 0;
+	bottom: 1rem;
+	font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #999;
+}
+.register{
+	display: block;
+    text-align: center;
+    line-height: 2rem;
+    margin: 1.8rem 0;
+    font-size: 1.4rem;
+}
+.login_btn{
+	display: block;
+    text-align: center;
+    color: #fff;
+    background: #60a5e8;
+    font-size: 1.4rem;
+    width: 100%;
+    line-height: 0;
+    height: 0;
+    padding: 2rem 0;
+}
+
+.login_box .form_invite {
+	padding-top: 3.5rem;
+}
+.invite_num-error{
+	display: none;
+}
+
+
+/* -------------------------------- register ------------------------------ */
+.register_box{
+    height: 4.2rem;
+}
+.register_box .head{
+    background: #60a5e8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.register_box .head .back_btn{
+	position: absolute;
+    font-size: 2rem;
+    color: #fff;
+    width: 4rem;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url('../images/left_icon.png') no-repeat center center;
+    background-size: 1rem;
+}
+.register_box .head .back_btn:after{
+	content: none;
+}
+.head p{
+	font-size: 1.5rem;
+    text-align: center;
+    color: #60a5e8;
+    line-height: 0;
+    height: 0;
+    padding: 2.1rem 0;
+}
+.register_box .head p{
+	color: #fff;
+}
+.register_box .con{
+    margin-top: 4.2rem; 
+}
+.register_box .form{
+	padding-top: 2rem;
+}
+.register_box .form .user{
+	line-height: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.error .tip{
+	color: #999;
+	background-image: url('../images/tip_icon.png');
+}
+.register_box .form .input input{
+	width: 100%;
+	padding: 0;
+}
+
+/* -------------------- 忘记密码 ----------------- */
+.forget_box .login_btn{
+	margin-top: 2rem;
+}
+.login_box .form_forget{
+	display: block;
+}
+
+/* -------------------- 忘记密码 - 密保问题 ----------------- */
+.login_box .form_forget_q{
+	padding-top: 2.5rem;
+}
+.login_box .form_forget_q input{
+	padding: 0;
+}
+
+/* -------------------- 忘记密码 - 密保问题 ----------------- */
+
+
+/* ========================================================================================================== */
+/* -------------------- 首页 ---------------------- */
+.header {
+	background: url('../images/bg_img.png') no-repeat center bottom;
+	padding-bottom: 2rem;
+}
+.header .logout{
+	text-align: right;
+}
+.header .logout a{
+	color: #fff;
+    font-size: 1.2rem;
+    line-height: 0;
+    height: 0;
+    padding: 1.5rem 0;
+    display: block;
+    width: 5rem;
+    margin-left: auto;
+    padding-left: 1rem;
+    background: url(../images/logout_icon.png) no-repeat left center;
+    background-size: 1rem;
+}
+.header .box div{
+	line-height: 2rem;
+	color: #fff;
+	text-align: center;
+	font-size: 1.2rem;
+}
+.header .box .img{
+	width: 8rem;
+    height: 8rem;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.header .box .img img{
+    height: 100%;
+}
+.header .box .name{
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+}
+.header .box .text{
+	width: 100%;
+	line-height: 1.5rem;
+}
+
+.index_box ul{
+	padding-top: 1rem;
+}
+ul:after{
+	clear: both;
+	content: '';
+	display: block;
+}
+.index_box li:nth-child(2n){
+	float: right;
+}
+.index_box li{
+    float: left;
+	width: 48%;
+	box-shadow: 0 0 1rem #dbdbdb;
+	margin-bottom: 3rem;
+}
+.index_box .box{
+	/*width: 100%;*/
+}
+.index_box .box .img{
+	width: 100%;
+    height: 10rem;
+    position: relative;
+    border-bottom: 2px solid #dbdbdb;
+}
+.index_box .box .img img{
+	height: 5rem;
+    width: 5rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.index_box .box .stit{
+	text-align: center;
+    font-size: 1.6rem;
+    line-height: 0;
+    height: 0;
+    padding: 2rem;
+}
+
+/* ========================================================================================================== */
+
+/* ---------------------------- 个人中心 ------------------------- */
+.self_bg{
+	background: #f7f7f7;
+}
+.self_top{
+    height: 12.4rem;
+    background: url('../images/self_bg.png') no-repeat center center;
+    background-size: cover;
+}
+.self_top .head{
+    background: transparent;
+    position: absolute;
+}
+.self_top .self_mess{
+    position: absolute;
+    top: 4.2rem;
+    left: 0;
+    right: 0;
+}
+.self_top .self_mess .box{
+    padding-right: 0;
+    border: 0;
+    background: transparent;
+}
+.self_top .self_mess .text{
+    padding-top: 1rem;
+}
+.self_top .right_i{
+    padding: 3rem 1rem;
+}
+.self-menu .first{
+    padding: 1rem 0;
+}
+.self-menu .last{
+    padding-top: 1rem;
+}
+.self-menu li a{
+	display: block;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+.self-menu li a:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.self-menu .name{
+	float: left;
+    height: 0;
+    line-height: 0;
+    padding: 2rem 1rem;
+}
+.right_i{
+	float: right;
+    font-style: normal;
+    font-size: 2.2rem;
+    color: #999;
+    height: 0;
+    line-height: 0;
+    padding: 2rem 1rem;
+    background: url('../images/right_icon.png') no-repeat left center;
+    background-size: 0.8rem;
+}
+.self_stxt{
+    font-size: 1.2rem;
+    float: right;
+    font-style: normal;
+    font-size: 2.2rem;
+    color: #999;
+    height: 0;
+    line-height: 0;
+    padding: 2rem 1rem;
+}
+
+/* ------------------------- 个人信息 --------------------------- */
+.self_mess .first{
+    padding: 0;
+}
+.self_mess li.first a{
+	padding: 1rem 0;
+}
+.self_mess li.first .right_i{
+	padding: 3rem 1rem;
+}
+.self_mess li.first a .img{
+	float: left;
+    width: 6rem;
+    height: 6rem;
+}
+.self_mess li.first .name{
+    font-size: 1.3rem;
+    padding: 3rem 1rem;
+}
+.self_mess input[type="file"]{
+	display: none;
+}
+.self_mess .during{
+	font-size: 1.2rem;
+}
+.high_mem{
+	background: #e86060;
+}
+.normal_mem{
+	background: #60a5e8;
+}
+.level{
+	display: inline-block;
+    height: 0;
+    line-height: 0;
+    padding: 1rem .5rem;
+    color: #fff;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.self_mess .txt{
+	font-size: 1.2rem;
+}
+
+
+/* ------------------- 个人信息-会员名称 -------------------- */
+.self-name .form{
+	padding-top: 1rem;
+}
+.self-name .input{
+	padding: 1rem;
+    background: #fff;
+}
+.self-name .input input{
+	padding: 0;
+    height: 2rem;
+    line-height: 2rem;
+    border: 0;
+    font-size: 1.6rem;
+}
+.self-name .input textarea{
+	padding: 0;
+    border: 0;
+    line-height: 2rem;
+    font-size: 1.3rem;
+}
+.self-name .input textarea::placeholder{
+	color: #999;
+}
+.self-name .login_btn{
+	margin-top: 3rem;
+}
+.self-name .tip{
+	text-align: right;
+    color: #999;
+    font-size: 1rem;
+}
+
+/* ------------------------ 修改密码 ---------------------- */
+.self-reset .head{
+    padding-top: 1rem;
+}
+.self-reset .head .step{
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    width: 2rem;
+    height: 0;
+    line-height: 0;
+    background: #60a5e8;
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+.self-reset .head p{
+    padding: 1.5rem 0;
+}
+.self-reset table{
+    width: 100%;
+}
+.self-reset table tr{
+    height: 3.5rem;
+}
+.self-reset table tr td:first-child{
+    width: 25%;
+}
+.self-reset table tr td{
+    width: 75%;
+}
+.self-reset table tr td p{
+    height: 0;
+    line-height: 0;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.self-reset table tr td input{
+    padding: .8rem;
+    height: 1.5rem;
+    line-height: 2.3rem;
+    font-size: 1.3rem;
+    background: transparent;
+    box-sizing: content-box;
+    width: 90%;
+}
+.self-reset table tr td input:focus{
+    border-color: #60a5e8;
+}
+.self-reset table tr:nth-child(2n){
+    height: 1.8rem;
+}
+
+
+/* -------------------- 个人空间链接 ------------------ */
+.self-space .link{
+    padding: .8rem;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+}
+.self-space .link textarea{
+    padding: 0;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    color: #999;
+    border: 0;
+}
+.self-space p{
+    height: 0;
+    line-height: 0;
+    padding: 1rem 0;
+    color: #60a5e8;
+    font-size: 1.2rem;
+}
+
+/* -------------------- 我的邀请码 ---------------- */
+.invite_num{
+    float: left;
+    line-height: 0;
+    height: 0;
+    padding: 2rem 0;
+}
+.self-invite .self_stxt{
+    font-size: 1.2rem;
+}
+
+.self-invite_set .form{
+    font-size: 0;
+    padding: 1rem 0rem;
+    background: #fff;
+}
+.self-invite_set p{
+    display: inline-block;
+    width: 28%;
+    height: 0;
+    line-height: 0;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.self-invite_set input{
+    width: 72%;
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    border: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    padding-right: 2rem;
+}
+.self-invite_set .con{
+    padding-top: 2rem;
+}
+
+/* ----------------------------- 会员介绍 -------------------- */
+.self-mem .head{
+    font-size: 1.6rem;
+    height: 0;
+    line-height: 0;
+    padding: 2rem 0;
+    color: #60a5e8;
+    border-bottom: 1px solid #bfbfbf;
+}
+.self-mem .txt{
+   padding-top: .5rem;
+}
+.self-mem .txt p{
+    line-height: 2.5rem;
+    font-size: 1.3rem;
+}
+.self-mem .txt .dead_line{
+    text-align: right;
+    font-size: 1.2rem;
+}
+.self-mem .foot p{
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+}
+.self-mem .foot p:last-of-type{
+    color: #999;
+}
+
+/* -------------------------------- 联系客服 ------------------------- */
+.self-connect{
+    padding: 1rem 0;
+}
+.self-connect .box{
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-bottom: 2rem;
+}
+.ter{
+    text-align: center;
+}
+.ter .ic{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    height: 2.4rem;
+    width: 2.4rem;
+}
+.self-connect .img{
+    width: 14rem;
+    margin: auto;
+    height: 14rem;
+}
+.self-connect img{
+    height: 100%;
+}
+.ter span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+    height: 0;
+    padding: 1rem 0;
+}
+.self-connect .box p{
+    text-align: center;
+    color: #999;
+    height: 0;
+    line-height: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.self-connect .btn{
+    margin-top: 2rem;
+}
+.self-connect .login_btn{
+    background: #2ab6fa;
+    border-radius: .5rem;
+    margin: 0 auto;
+    width: 13rem;
+}
+
+/* ========================================================================================================== */
+/* ----------------------------- 我的好友页 -------------------------------- */
+.fri-top .menu{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+    background: url('../images/fri_menu.png') no-repeat center center;
+    background-size: 2rem;
+}
+.fri-top .menu i{
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    background: #e86060;
+    top: 1rem;
+    right: .6rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.fri-top .box{
+    position: absolute;
+    top: 100%;
+    right: .5rem;
+    background: #fff;
+    padding: .5rem;
+    box-shadow: 0rem 0.5rem 2rem #e5e5e5;
+    display: none;
+}
+.fri-top .box a{
+    display: block;
+    line-height: 0;
+    height: 0;
+    padding: 1.5rem 0rem 1.5rem 2.5rem;
+    font-size: 1.2rem;
+    color: #60a5e8;
+    border-bottom: 1px solid #e5e5e5;
+}
+.fri-top .fri-add{
+    background: url('../images/fri_add_icon.png') no-repeat .3rem center;
+    background-size: 1.4rem;
+}
+.fri-top .box .fri-mess{
+    border-bottom: 0;
+    background: url('../images/fri_mess.png') no-repeat .3rem center;
+    background-size: 1.4rem;
+    position: relative;
+}
+.fri-top .box .fri-mess i{
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    background: #e86060;
+    top: .6rem;
+    left: 1.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.fri-nav{
+    height: 4.2rem;
+}
+.fri-nav ul{
+    overflow: hidden;
+    position: fixed;
+    top: 4.2rem;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.fri-nav li{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    height: 0;
+    line-height: 0;
+    padding: 2rem 0;
+    border-bottom: 2px solid #ccc;
+    background: #fff;
+}
+.fri-nav li a{
+    position: relative;
+}
+.fri-nav li a i{
+    position: absolute;
+    font-style: normal;
+    height: 0;
+    line-height: 0;
+    padding: .7rem 0;
+    width: 1.4rem;
+    text-align: center;
+    top: -.8rem;
+    right: -1rem;
+    border-radius: 50%;
+    background: red;
+    color: #fff;
+    font-size: 1rem;
+}
+.fri-nav .on{
+    border-bottom: 2px solid #60a5e8;
+}
+.fri-nav li a{
+    font-size: 1.3rem;
+}
+.fri-list li{
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    border-bottom: 1px solid #f4f4f4;
+}
+.fri-list li a{
+    padding: 1rem;
+    line-height: 2rem;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    transition: all .5s;
+    border: 0;
+}
+.fri-list .name{
+    padding: 0;
+    float: none;
+}
+.fri-list .num{
+    padding: 0rem;
+    float: none;
+}
+.fri-list li a i{
+    padding: 1rem;
+}
+.fri-list .del{
+    padding: 1.981rem 1rem;
+    height: 0;
+    line-height: 0;
+    display: block;
+    background-size: 1.5rem;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    z-index: 1002;
+    width: 4rem;
+    background: #e86060;
+    margin-right: -6rem;
+    transition: all .5s;
+    font-style: normal;
+    font-size: 1.6rem;
+    color: #fff;
+    text-align: center;
+}
+.fri-list .del.on{
+    margin-right: 0;
+}
+.under{
+    display: none;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer .con{
+    padding: 1rem 0;
+}
+.footer .login_btn{
+    width: 50%;
+    outline: none;
+    -webkit-tap-highlight-color:transparent;
+}
+.footer .delZ{
+    background: #fff;
+    color: #333;
+}
+.footer .quit{
+    display: none;
+    width: 100%;
+}
+.footer .login_btn:active{
+    background: #bfbfbf;
+}
+body .layui-m-layer1 .layui-m-layercont{
+    text-align: center;
+    padding: 2rem 4rem;
+    font-size: 1.4rem;
+    line-height: 3rem;
+}
+body .layui-m-layer1 .layui-m-layerbtn span[type="1"]{
+    background: #60a5e8;
+}
+.fri-shadow{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 4.2rem;
+    z-index: 1001;
+}
+
+
+/* ------- 好友列表 ----------- */
+.friend-list-top .edit{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 0;
+    line-height: 0;
+    padding: 2.1rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.friend-list .box{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+}
+.friend-list .box .img{
+    width: 6rem;
+    height: 6rem;
+    margin-right: 1rem;
+}
+.friend-list .text{
+    padding-top: 1.5rem;
+    width: calc(100% - 14rem);
+    width: -webkit-calc(100% - 14rem);
+}
+.friend-list .box .img img{
+    height: 100%;
+}
+.friend-list .name{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-right: .5rem;
+    max-width: calc(100% - 6rem);
+    max-width: -webkit-calc(100% - 6rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    height: 2rem;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.friend-list .level{
+    margin-top: 0;
+    vertical-align: bottom;
+}
+.friend-list .userId{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-top: .5rem;
+}
+.friend-list .btn{
+    line-height: 0;
+    display: block;
+    height: 0;
+    padding: 1rem;
+    border: 1px solid #60a5e8;
+    color: #60a5e8;
+    border-radius: 1.2rem;
+    margin-top: 2rem;
+}
+
+.move_where p{
+    height: 0;
+    line-height: 0;
+    padding: 2rem 1rem;
+}
+.move_where select{
+    height: 3rem;
+    line-height: 3rem;
+    border: 0;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    position: relative;
+    background: #fff;
+}
+.move_where .drag{
+    position: relative;
+}
+.move_where .drag:after{
+    position: absolute;
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    border: .5rem solid transparent;
+    border-top-color: #555;
+    right: 1rem;
+    top: 50%;
+    margin-top: -.3rem;
+}
+
+/* ------- 好友详情 ---------- */
+.fri-detail .head{
+    margin-bottom: 2rem;
+}
+.fri-detail .head .text{
+    padding-top: 2rem;
+}
+.fri-detail .head .btn{
+    margin-top: 1.7rem;
+}
+.fri-detail .box{
+    border: 0;
+}
+.fri-detail .txt li{
+    padding: 1.5rem 0;
+    background: #fff;
+    border-bottom: 2px solid #f4f4f4;
+}
+.fri-detail .stit{
+    display: inline-block;
+    width: 25%;
+    line-height: 2rem;
+    text-align: center;
+    color: #999;
+    font-size: 1.4rem;
+    vertical-align: middle;
+}
+.fri-detail li p{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    width: calc(96% - 8rem);
+    width: -webkit-calc(96% - 8rem);
+}
+.fri-detail li:last-of-type span, .fri-detail li:last-of-type p{
+    vertical-align: top;
+}
+footer{
+    height: 4rem;
+}
+
+
+/* 添加好友 - 标签页 */
+.window{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f7f7f7;
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: all .5s;
+}
+.window.on{
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 1600;
+}
+.window .register_box{
+    z-index: 100;
+}
+.window .head{
+    background: #fff;
+    border-bottom: 1px solid #cfcfcf;
+}
+.window .head .back_btn{
+    background-image: url('../images/Nleft_icon.png');
+}
+.window .head p{
+    color: #333;
+}
+.addFri {
+    padding: 1rem 0;
+}
+.addFri .input{
+    padding: 1rem;
+    background: #fff;
+}
+.addFri input{
+    padding: 0;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    color: #555;
+    border: 0;
+}
+.addFri-foot{
+    height: 4.2rem;
+}
+.addFri-foot .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0;
+    border-top: 2px solid #eee;
+}
+.addFri-foot .footer a{
+    display: inline-block;
+    width: 50%;
+    height: 0;
+    line-height: 0;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.addFri-foot .footer a:last-child{
+    background: #60a5e8;
+    color: #fff;
+}
+
+/* 查询好友 */
+.fri-search .form{
+    padding: 2rem 0;
+}
+.fri-search .input{
+    width: 75%;
+    padding: .5rem 3rem;
+    box-sizing: border-box;
+    border: 1px solid #bfbfbf;
+    background: url('../images/search_icon.png') no-repeat 1rem center;
+    background-size: 1.2rem;
+}
+.fri-search .input input{
+    padding: 0;
+    height: 2rem;
+    line-height: 2rem;
+    border: 0;
+    font-size: 1.2rem;
+    background: transparent;
+}
+.fri-search .login_btn{
+    width: 20%;
+    padding: 1.5rem 0;
+    border-radius: .5rem;
+    border: 1px solid transparent;
+}
+.ban-func{
+    display: none;
+    height: 0;
+    line-height: 0;
+    padding: 2rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #999;
+}
+.result .man_box{
+    display: none;
+}
+.man_box {
+    background: #fff;
+}
+.man_box .img{
+    margin-right: 1.2rem;
+    width: 9rem;
+    height: 9rem;
+}
+.man_box .img img{
+    height: 100%;
+}
+.man_box .text{
+    padding-top: .5rem;
+    padding-right: .5rem;
+    box-sizing: border-box;
+    width: calc(100% - 10.2rem);
+    width: -webkit-calc(100% - 10.2rem);
+}
+.man_box .txt{
+    margin-bottom: .5rem;
+}
+.man_box .txt span{
+    vertical-align: middle;
+    margin-left: .2rem;
+}
+.man_box .txt span:first-of-type{
+    margin-left: 0;
+}
+.man_box .name{
+    display: inline-block;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    max-width: 6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.man_box .userId{
+    display: inline-block;
+    line-height: 2rem;
+    font-size: 1.3rem;
+}
+.man_box .level{
+    margin-top: 0;
+}
+.man_box .stxt{
+    height: 3.2rem;
+    line-height: 1.6rem;
+    color: #999;
+    overflow: hidden;
+    margin-bottom: .8rem;
+}
+.man_box .link a{
+    line-height: 0;
+    height: 0;
+    display: inline-block;
+    padding: .8rem 0;
+    font-size: 1rem;
+}
+.man_box .btn a{
+    line-height: 0;
+    height: 0;
+    display: inline-block;
+    padding: .8rem;
+    color: #60a5e8;
+    font-size: 1rem;
+}
+
+/* ------- 消息列表 ------- */
+.fri-mess ul{
+    padding-bottom: 2rem;
+}
+.fri-mess li{
+    padding-top: 1rem;
+}
+.fri-mess .time{
+    line-height: 0;
+    height: 0;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: #999;
+}
+.fri-mess .man_box{
+    padding: .5rem;
+    border: 1px solid #ccc;
+    background: transparent;
+}
+.fri-mess .man_box .text{
+    padding-right: 0;
+}
+.fri-mess .btn{
+    font-size: 0;
+    margin-top: .5rem;
+    text-align: right;
+}
+.fri-mess .btn a{
+    line-height: 0;
+    height: 0;
+    padding: 1.3rem 2rem;
+    display: inline-block;
+    background: #60a5e8;
+    color: #fff;
+    font-size: 1.3rem;
+    border: 1px solid #60a5e8;
+}
+.fri-mess .move{
+    margin-right: 1rem;
+}
+.fri-mess .btn .del{
+    background: transparent;
+    color: #60a5e8;
+}
+.fri-mess .reply{
+    display: none;
+    height: 0;
+    line-height: 0;
+    font-size: 1.2rem;
+    padding: 1.3rem;
+    color: #999;
+    border: 1px solid transparent;
+}
+
+
+/* ============================================================================= */
+/* --------- 相册展示 --------*/
+
+.q_header{
+  background-color: #60a5e8;
+  padding: 2.2rem 0;
+}
+
+.q_header .img{
+  font-size: 0;
+  width: 6rem;
+  overflow: hidden;
+}
+
+.q_header .img img{
+  height: 6rem;
+}
+
+.q_header .info{
+  width: -moz-calc(96% - 6rem);
+  width: -moz--webkit-calc(96% - 6rem);
+  width: -webkit-calc(96% - 6rem);
+  width: -webkit--webkit-calc(96% - 6rem);
+  width: calc(96% - 6rem);
+  width: -webkit-calc(96% - 6rem);
+}
+
+.q_header .info .tit{
+  font-size: 1.8rem;
+  line-height: 1.2em;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.q_header .info .stit{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #fff;
+    height: 3.2rem;
+    overflow: hidden;
+}
+
+.q_photoClassification .btnBox{
+  padding: 1rem 0;
+  font-size: 0;
+}
+
+.q_photoClassification .btnBox .btn{
+    font-size: 1.2rem;
+    line-height: 0;
+    height: 0;
+    color: #fff;
+    background-color: #60a5e8;
+    padding: 0.6rem 1rem;
+    display: inline-block;
+    width: 6rem;
+    text-align: center;
+    padding: 1.3rem 1rem;
+}
+
+.q_photoClassification .clear_more{
+    margin-right: 1rem;
+}
+
+.q_photoClassification .list li{
+  float: left;
+  width: 48%;
+  margin-bottom: 2rem;
+}
+
+.q_photoClassification .list li:nth-child(2n+3){
+  float: right;
+}
+
+.q_photoClassification .list li:first-child .edit{
+    visibility: hidden;
+}
+
+.q_photoClassification .list .imgBox{
+  border: 1px solid #eee;
+  text-align: center;
+  height: 10rem;
+  margin-bottom: 0.6rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 单选编辑框 */
+.select{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    z-index: 500;
+}
+.select i{
+  display: inline-block;
+  width: 2rem;
+    height: 2rem;
+    border-radius: 17px;
+    background: url(../images/select_icon.png) no-repeat center center;
+    background-size: 2rem;
+    position: absolute;
+    top: -1rem;
+    right: -.8rem;
+}
+.select input{
+  display: none;
+}
+
+.q_photoClassification .list li a{
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+.q_photoClassification .list .q_addBox{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.q_photoClassification .list .add_img{
+  width: 5rem;
+  font-size: 0;
+  margin: 0 auto 2rem auto;
+}
+
+.q_photoClassification .list .add_img img{
+  height: 3rem;
+}
+
+.q_photoClassification .list .add_text{
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1em;
+} 
+
+.q_photoClassification .list .cover{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.q_photoClassification .list .cover2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.q_photoClassification .list .img{
+  height: 100%;
+  overflow: hidden;
+}
+
+.q_photoClassification .list .img img{
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.q_photoClassification .list .tit{
+  position: absolute;
+  width: 100%;
+  padding: 0 0.6rem;
+  top: 50%;
+  left: 0;
+  font-size: 0;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 200;
+}
+
+.q_photoClassification .list .tit .name{
+    display: inline-block;
+    font-size: 1.3rem;
+    vertical-align: middle;
+    line-height: 1.2em;
+    max-width: 11rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.q_photoClassification .list .tit .num{
+    display: inline-block;
+    font-size: 1.3rem;
+    vertical-align: middle;
+    line-height: 1.2em;
+}
+
+.q_photoClassification .list .btnBox{
+  padding: 0;
+}
+
+.q_photoClassification .list .edit{
+  width: 3rem;
+  height: 3rem;
+  background: url('../images/edit.png') no-repeat center center;
+  background-size: 3rem 3rem;
+}
+
+.q_photoClassification .list .edit.on{
+  background-image: url('../images/delete.png')
+}
+
+.q_photoClassification .list .q_btnBox{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 550;
+}
+
+.q_photoClassification .list .q_btnBox a{
+  font-size: 1.4rem;
+  line-height: 0;
+  width: 60%;
+  height: 0;
+  color: #fff;
+  padding: 1.4rem 0;
+  border: 1px solid #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 auto 1.4rem auto;
+}
+
+.q_photoClassification .list .q_btnBox a:last-child{
+  margin-bottom: 0;
+}
+
+.clear_more_btn .footer{
+    background: #fff;
+    z-index: 600;
+}
+.visno{
+    visibility: hidden;
+}
+
+/* ---------------- 相册展示 二级目录 ------------------ */
+.ptShow_2 .list .imgBox{
+    border: 0;
+}
+
+.ptShow_2 .list .img{
+    padding-top: 1rem;
+    box-sizing: border-box;
+}
+
+.ptShow_2 .list .img img{
+    width: 7rem;
+    height: 6rem;
+}
+
+.ptShow_2 .list .tit{
+    top: 85%;
+    color: #333;
+}
+
+.ptShow_2 .list .q_btnBox a{
+    margin-bottom: .8rem;
+    padding: 1.2rem 0;
+}
+
+.collectF .moveF div{
+    margin-bottom: 1rem;
+}
+
+.collectF .moveF p{
+    height: 0;
+    line-height: 0;
+    padding: 1.5rem .5rem;
+    font-size: 1.3rem;
+}
+
+.collectF .moveF select{
+    padding: 0 .5rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    border: 0;
+    background: #fff;
+}
+
+
+/* ---------------- 相册展示 三级目录 ------------------ */
+.ptShow_3 .list .imgBox{
+    border: 1px solid #eee;
+    padding: .3rem;
+}
+
+.ptShow_3 .list .img{
+    padding-bottom: 2.6rem;
+    box-sizing: border-box;
+    /*background: url(../images/auto_img.png) no-repeat center 2rem;*/
+}
+
+.ptShow_3 .list .tit{
+    top: 88%;
+    color: #333;
+}
+
+.ptShow_3 .list .q_btnBox a{
+    margin-bottom: .8rem;
+    padding: 1.2rem 0;
+}
+
+.ptShow_3 .list .btnBox{
+    box-sizing: border-box;
+    height: 3rem;
+}
+
+.ptShow_3 .levelShow{
+    height: 100%;
+    width: calc(100% - 3rem);
+    width: -webkit-calc(100% - 3rem);
+}
+
+.ptShow_3 .levelShow p{
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-bottom: .4rem;
+}
+
+.ptShow_3 .levelShow .stit span{
+    text-transform: uppercase;
+}
+
+.ptShow_3 .blings i{
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.ptShow_3 .blings .on{
+    background-position: 0 -24px;
+}
+
+.newF3 .box{
+    font-size: 0;
+    background: #fff;
+    padding: 1rem;
+}
+
+.newF3 .box p{
+    display: inline-block;
+    font-size: 1.2rem;
+    height: 0;
+    line-height: 0;
+    padding: 1rem 0;
+    width: 6rem;
+    color: #999;
+    text-align: center;
+}
+
+.newF3 .box input{
+    width: calc(96% - 7rem);
+    width: -webkit-calc(96% - 7rem);
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0;
+}
+
+.newF3 .error{
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 1.8rem;
+}
+
+.newF3 .error .tip{
+    padding-left: 2rem;
+    background-size: 1.3rem;
+    background-position: left center;
+}
+
+.icons{
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+.icons div{
+    margin-bottom: .5rem;
+    height: 1.8rem;
+}
+.icons i{
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .8rem;
+    cursor: pointer;
+}
+
+.sunny {  background: url('../images/sunny_icon.fw.png') no-repeat;}
+.diamond{ background: url('../images/diamond_icon.fw.png') no-repeat;}
+.crescent_moon{ background: url('../images/crescent_moon_icon.fw.png') no-repeat;}
+.star{  background: url('../images/star_icon.fw.png') no-repeat;}
+.zap{ background: url('../images/zap_icon.fw.png') no-repeat;}
+.heart{ background: url('../images/heart_icon.fw.png') no-repeat;}
+.rose{  background: url('../images/rose_icon.fw.png') no-repeat;}
+
+.icons .on{
+  background-position: 0 -24px;
+}
+
+
+
+
+/* ====================================== 四级目录 ============================ */
+.ptShow_4 .btn{
+    margin-right: .5rem;
+}
+.ptShow_4 .clear_more{
+    margin-right: 0;
+}
+.ptShow_4 .img video{
+    display: none;
+    width: auto;
+    height: 100%;
+}
+.ptShow_4 .list .video{
+    background: url('../images/play.png') no-repeat center center;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: none;
+}
+.ptShow_4 .btnBox .ban_upPic{
+    background-color: #c9c9c9;
+    display: none;
+}
+.ptShow_4 .btnBox .ban_upMov{
+    background-color: #c9c9c9;
+    display: none;
+}
+
+
+.upWin{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #f7f7f7;
+    opacity: 0;
+    transition: all .5s;
+    height: 26rem;
+    width: 94%;
+    border-radius: 1rem;
+    padding: 1rem 4rem;
+    box-sizing: border-box;
+}
+.upWin.on{
+    opacity: 1;
+    z-index: 1600;
+}
+.upWin .tit{
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    margin-bottom: .5rem;
+}
+.upWin .tit span{
+    padding-left: 1rem;
+}
+.upWin input{
+    display: none;
+}
+.upWin .img{
+    height: 12rem;
+    width: 22rem;
+    background: #c9c9c9;
+    display: table-cell;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+.upWin .img img{
+    height: auto;
+    width: auto;
+    vertical-align: middle;
+    display: inline;
+}
+.upWin .img p{
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fff;
+    line-height: 2rem;
+}
+.upWin .btn{
+    margin-top: 3rem;
+}
+.upWin .btn a{
+    font-size: 1.2rem;
+    height: 0;
+    line-height: 0;
+    padding: 1.5rem;
+    width: 30%;
+    text-align: center;
+    border: 1px solid #c9c9c9;
+    border-radius: 2px;
+}
+.upWin .upload{
+    background: #c9c9c9;
+    color: #fff;
+}
+.upWin .upload.on{
+    background: #60a5e8;
+    border-color: #60a5e8;
+}
+
+.shadow{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.8);
+    z-index: 1500;
+}
+
+.scanf{
+    z-index: 1999;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 1rem;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+body .swiper-wrapper{
+    align-items: center;
+    height: auto!important;
+}
+body .swiper-wrapper video{
+    width: 100%;
+    display: none;
+    max-height: 20rem;
+}

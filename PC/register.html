@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app=capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+	<title>注册</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+</head>
+<body>
+	<!-- 背景图 -->
+	<div class="bg"></div>
+	<!-- register main -->
+	<div class="login_main">
+		<div class="box clear">
+			<div class="img fl"></div>
+			<div class="menu fl">
+				<div class="register_box">
+					<h1 class="tit">全民艺术摄影作品展示馆</h1>
+					<section class="form">
+						<form action="javascript:;">
+							<p class="userNum">账号：<span>686438</span></p>
+							<div>
+								<input type="text" name="name" placeholder="请输入会员名称">
+							</div>
+							<div class="pwd">
+								<input type="password" name="password" placeholder="请设置密码">
+								<em><i></i>首字母+数字/字母，至少6位</em>
+								<em class="password-error"><i></i>密码格式不正确，请重新输入</em>
+							</div>
+							<div class="sure_pwd">
+								<input type="password" name="password_alike" placeholder="请确认密码">
+								<em class="password_alike-error"><i></i>两次输入密码不一致，请重新输入</em>
+							</div>
+							<div>
+								<input type="text" placeholder="请设置密保问题">
+								<em><i></i>问题及答案为一次性设定，用户需紧记</em>
+							</div>
+							<div>
+								<input type="text" placeholder="请设置密保答案">
+							</div>
+							<a href="javascript:;" class="login_btn">注册</a>
+							<a href="login.html">已有账户，立即登录</a>
+						</form>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- register main end -->
+</body>
+<script type="text/javascript">
+	// 验证密码
+	$("[name='password']").blur(function(){
+		if(!$("[name='password']").check_password()){
+            $('.password-error').show();
+		}else{
+			$('.password-error').hide();
+		}
+	});
+	// 验证二次密码
+	$("[name='password_alike']").blur(function(){
+		if(!$("[name='password_alike']").check_password_alike("[name='password']")){
+            $('.password_alike-error').show();
+		}else{
+			$('.password_alike-error').hide();
+		}
+	});
+
+	$("[name='password']").on('input propertychange', function(){
+		$('.password-error').hide();
+	});
+	$("[name='password_alike']").on('input propertychange', function(){
+		$('.password_alike-error').hide();
+	});
+
+</script>
+</html>

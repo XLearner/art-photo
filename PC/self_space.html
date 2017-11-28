@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app=capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+	<title>个人中心-个人空间链接</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body>
+	<div class="header self">
+		<div class="menu con clear">
+			<h1 class="tit fl">全民艺术摄影作品展示馆</h1>
+			<a href="javascript:;" class="logout fr"><i></i><span>退出登录</span></a>
+		</div>
+	</div>
+	<!-- breadcrumb -->
+	<div class="breadcrumb w">
+		<div class="con clear">
+			<ul>
+				<li><a href="index.html"><i></i><span>首页</span></a>/</li>
+				<li><a href="self.html"><span>个人中心</span></a>/</li>
+				<li><span>个人空间链接</span></li>
+			</ul>
+		</div>
+	</div>
+	<!-- breadcrumb end -->
+	<div class="self_con w">
+		<div class="con clear">
+			<div class="menu fl">
+				<ul class="box">
+					<li></li>
+					<li><a href="self.html">个人资料</a></li>
+					<li><a href="self_reset.html">修改密码</a></li>
+					<li class="on"><a href="self_space.html">个人空间链接</a></li>
+					<li><a href="self_invite.html">我的邀请码</a></li>
+					<li><a href="self_level.html">会员等级介绍</a></li>
+					<li><a href="self_connect.html">联系客服</a></li>
+				</ul>
+			</div>
+			<div class="wrap fr">
+				<h1 class="tit">个人空间链接</h1>
+				<div class="space">
+					<div class="link">http://alskfjalsdjfoiqwenn</div>
+					<p>
+						<input type="button" value="复制">
+					</p>
+				</div>
+				<div class="ban_fun">
+					<p>
+						请联系客服开通该部分功能
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var btn = $('input[type="button"');
+	btn.click(function(){
+		layer.msg('已复制成功');
+	});
+</script>
+</html>

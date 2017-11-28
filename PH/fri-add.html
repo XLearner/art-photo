@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>我的好友-添加好友</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="register_box">
+		<div class="head">
+			<a href="index.html" class="back_btn"></a>
+			<p>全部好友</p>
+		</div>
+	</section>
+
+	<!-- nav -->
+	<nav class="fri-nav">
+		<ul>
+			<li><a href="friend.html">全部好友</a></li>
+			<li class="on"><a href="javascript:;">添加好友</a></li>
+			<li><a href="fri-mess.html">消息列表<i>2</i></a></li>
+		</ul>
+	</nav>
+
+	<!-- fri-search -->
+	<section class="fri-search">
+		<div class="con">
+			<div class="form">
+				<form action="javascript:;" class="clear">
+					<div class="input fl"><input type="text" name="user" placeholder="输入账号查找"></div>
+					<a href="javascript:;" class="login_btn fr">查找</a>
+				</form>
+			</div>
+			<div class="result">
+				<ul>
+					<li>
+						<div class="man_box clear">
+							<div class="img fl"><img src="images/user.png"></div>
+							<div class="text fl">
+								<div class="txt">
+									<span class="name">猫的树</span><span class="userId">(123123)</span><span class="level normal_mem">普通会员</span>
+								</div>
+								<div class="stxt">
+									发现生活点滴美好，分享所见到的每一个美丽的瞬间，分享美好
+								</div>
+								<div class="link clear">
+									<a href="javascript:;" class="fl">查看空间</a>
+									<div class="btn fr">
+										<a href="javascript:;">加为好友</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 不是会员 -->
+			<div class="ban-func">
+				请升级为高级会员，开启添加好友功能
+			</div>
+		</div>
+	</section>
+
+</body>
+<script type="text/javascript">
+
+		$('.login_btn').click(function(){
+
+			var num = $('[name="user"]').val();
+			if(num != 1){
+				$('.man_box').hide();
+				layer.open({
+					skin: 'msg',
+					content: '未查询到该账号，请重新输入',
+					time: 2
+				});
+			}else{
+				$('.man_box').show();
+			}
+		});
+
+
+</script>
+</html>

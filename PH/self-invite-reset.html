@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>个人中心-我的邀请码-修改邀请码</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="register_box">
+		<div class="head">
+			<a href="self-invite.html" class="back_btn"></a>
+			<p>我的邀请码</p>
+		</div>
+	</section>
+
+	<!-- menu -->
+	<section class="self-menu self-invite_set">
+		<section class="form">
+			<form action="javascript:;">
+				<p>编辑邀请码</p>
+				<input type="text" name="invite_num" placeholder="(6位数字/字母)">
+			</form>
+		</section>
+		<div class="con">
+			<a href="javascript:;" class="login_btn">保存</a>
+		</div>
+	</section>
+
+</body>
+<script type="text/javascript">
+	$('.login_btn').click(function(){
+		var num = $('[name="invite_num"]').val();
+		if (num == 123123) {
+			layer.open({
+				skin: 'msg',
+				content: '邀请码已被占用，请重新输入',
+				time: 2
+			})
+		}else if (num == 123456) {
+			layer.open({
+				skin: 'msg',
+				content: '与原邀请码一致，请重新输入',
+				time: 2
+			})
+		}
+	});
+</script>
+</html>

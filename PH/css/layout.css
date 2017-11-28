@@ -1,0 +1,332 @@
+html {
+  font-size: 62.5%;
+}
+body,
+p,
+ul,
+ol,
+li,
+form,
+th,
+td,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+title,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+em,
+strong,
+time,
+title {
+  font-size: 1.2rem;
+  font-style: normal;
+}
+li,
+dt,
+dd {
+  list-style: none;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+  font-size: 0;
+}
+table {
+  border-collapse: collapse;
+}
+input,
+textarea {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea {
+  resize: none;
+  overflow: auto;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  font-size: 1.2rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.2rem;
+}
+.clear:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.con {
+  margin: 0 auto;
+  width: 94%;
+}
+/******************分割线********************/
+body .layui-m-layer1 .layui-m-layerchild {
+  border-radius: 6px;
+  font-size: 1.2rem;
+  width: 94%;
+}
+body .layui-m-layercont {
+  line-height: 1.6em;
+}
+body .layui-m-layerbtn {
+  border-top: none;
+  -ms-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
+  -o-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  font-size: 1.4rem;
+  height: 3em;
+  line-height: 3em;
+  overflow: hidden;
+}
+body .layui-m-layerbtn span {
+  font-size: 1.4rem;
+  line-height: 3em;
+}
+body .layui-m-layerbtn span[no] {
+  border-color: #CCCCCC ;
+  background-color: #CCCCCC ;
+  -ms-border-radius: 0 0 0 6px;
+  -moz-border-radius: 0 0 0 6px;
+  -webkit-border-radius: 0 0 0 6px;
+  -o-border-radius: 0 0 0 6px;
+  border-radius: 0 0 0 6px;
+  color: #fff;
+  width: 50%;
+}
+body .layui-m-layerbtn span[yes] {
+  border-color: #FF9237;
+  background-color: #FF9237;
+  color: white;
+  -ms-border-radius: 0 0 6px 0;
+  -moz-border-radius: 0 0 6px 0;
+  -webkit-border-radius: 0 0 6px 0;
+  -o-border-radius: 0 0 6px 0;
+  border-radius: 0 0 6px 0;
+  width: 50%;
+}
+body .layui-m-layerchild h3 {
+  background-color: #fff;
+  -ms-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
+  -o-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid #ccc;
+  padding: 1% 5% 1%;
+  height: 2em;
+  line-height: 2em;
+}
+body .carousel-indicators li {
+  background-color: white;
+  margin: 1px 5px;
+}
+body .carousel-indicators .active {
+  height: 11px;
+  width: 11px;
+  background-color: #ff9237;
+  border-color: #ff9237;
+  margin: 1px 5px;
+}
+body .layui-layer-setwin {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.1rem;
+}
+body .layui-layer-setwin a {
+  /*font-size: 1.2rem;*/
+  height: 1.4rem;
+  margin-left: 0;
+  width: 1.4rem;
+}
+body .layui-layer-ico {
+  background-size: 21rem auto;
+  /*font-size: 1.2rem;*/
+}
+body .layui-layer-setwin .layui-layer-close1 {
+  background-position: 0 -4rem;
+}
+html body {
+  color: #555;
+  font-family: Microsoft YaHei, arial, tahoma, '\5fae\8f6f\96c5\9ed1', 'Hiragino Sans GB', sans-serif !important;
+  /*max-width: 640px;*/
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: #555;
+}
+img {
+  width: 100%;
+}
+input,
+textarea {
+  width: 100%;
+  line-height: 1.8;
+  padding-left: 1rem;
+  border: none;
+  border: 1px solid #bbb;
+  -ms-border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  font-size: 1.2rem;
+  color: #555;
+  font-family: Microsoft YaHei, arial, tahoma, '\5fae\8f6f\96c5\9ed1', 'Hiragino Sans GB', sans-serif !important;
+}
+input.on {
+  border-color: red;
+}
+select {
+  line-height: 1.8 ;
+  border: none;
+  border: 1px solid #bbb;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 1.2rem;
+  color: #555;
+  font-family: Microsoft YaHei, arial, tahoma, '\5fae\8f6f\96c5\9ed1', 'Hiragino Sans GB', sans-serif !important;
+}
+.float-box {
+  position: relative;
+}
+.text-r {
+  text-align: right;
+}
+.text-l {
+  text-align: left;
+}
+.text-c {
+  text-align: center;
+}
+.fb {
+  font-weight: bolder;
+}
+.fn {
+  font-weight: normal;
+}
+.bg-b {
+  background-color: #333333;
+  width: 100%;
+}
+.bg-w {
+  background-color: white;
+  width: 100%;
+}
+.bg-g {
+  background-color: #f8f8f8;
+  width: 100%;
+}
+.border {
+  border: 1px solid #ddd;
+}
+.hide {
+  display: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.error-alert-box {
+  height: 25px;
+  font-size: 14px;
+  color: red;
+}
+.name-error,
+.username-error,
+.phone-error,
+.phone_code-error,
+.email-error,
+.password-error,
+.password_null-error,
+.password_alike-error,
+.ID-error,
+.name-true,
+.ID-true,
+.phone-true,
+.phone_code-true,
+.email-true,
+.password-true,
+.password_null-true,
+.password_alike-true {
+  display: none ;
+}
+.button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #ff9237;
+  line-height: 2.2em;
+}
+.button:hover {
+  opacity: 0.9;
+  color: white;
+}
+/********************分割线********************/
+/***************
+**************
+验证码按钮事件css类
+**************
+***************/
+.M_verification-code {
+  display: inline-block;
+  color: #EC773A;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.M_verification-code.on {
+  background-color: #CCCCCC;
+  color: #A0A0A0;
+}

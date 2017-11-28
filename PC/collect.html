@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app=capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+	<title>相册存放</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript" src="js/func.js"></script>
+</head>
+<body>
+	<div class="header show">
+		<div class="menu con clear">
+			<h1 class="tit fl">全民艺术摄影作品展示馆</h1>
+			<a href="javascript:;" class="logout fr"><i></i><span>退出登录</span></a>
+		</div>
+	</div>
+	<!-- breadcrumb -->
+	<div class="breadcrumb w">
+		<div class="con clear">
+			<ul>
+				<li><a href="index.html"><i></i><span>首页</span></a>/</li>
+				<li><span>相册存放</span></li>
+			</ul>
+		</div>
+	</div>
+	<!-- breadcrumb end -->
+	<!-- show head -->
+	<div class="show_head w">
+		<div class="con clear">
+			<div class="img fl"><img src="images/first/user.png" alt=""></div>
+			<div class="txt fl">
+				<div class="name">猫的树</div>
+				<div class="text">关注生活，热爱生活，那是多久回来赛的机会</div>
+			</div>
+		</div>
+	</div>
+	<!-- show head end -->
+	<!-- show box -->
+	<div class="show_box w">
+		<div class="con">
+			<div class="box">
+				<div class="clear">
+					<a href="javascript:;" class="clear_more fl">批量删除</a>
+					<div class="fr">
+						<span class="del">删除</span>
+						<span class="cancel">取消</span>
+					</div>
+				</div>
+				<div class="wrap">
+					<ul class="menu">
+						<li>
+							<a href="javascript:;" class="add">
+								<div class="img"><img src="images/first/add_icon.png" alt=""></div>
+								<p>添加分类</p>
+							</a>
+						</li>
+						<li class="under">
+							<div class="pic">
+								<div class="select">
+									<i></i>
+									<input type="text" value="0">
+								</div>
+								<a href="collect_2.html">
+									<div class="tit"><span class="stit">.</span><span class="num"></span></div>
+									<div class="img"><img src="images/first/wall.jpg" alt=""></div>
+								</a>
+								<p class="btn">
+									<span class="edit">编辑</span>
+									<span class="del">删除</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="pic">
+								<div class="select">
+									<i></i>
+									<input type="text" value="0">
+								</div>
+								<a href="collect_2.html">
+									<div class="tit"><span class="stit">香港摄影</span><span class="num"></span></div>
+									<div class="img"><img src="images/first/wall.jpg" alt=""></div>
+								</a>
+								<p class="btn">
+									<span class="edit">编辑</span>
+									<span class="del">删除</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="pic">
+								<div class="select">
+									<i></i>
+									<input type="text" value="0">
+								</div>
+								<a href="collect_2.html">
+									<div class="tit"><span class="stit">香港摄影</span><span class="num"></span></div>
+									<div class="img"><img src="images/first/wall.jpg" alt=""></div>
+								</a>
+								<p class="btn">
+									<span class="edit">编辑</span>
+									<span class="del">删除</span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- show box end-->
+	<!-- footer -->
+	<div class="footer show_foot">
+		<div class="con">
+			<p>本站内容均由会员提供，请会员安全使用相册，禁止涉嫌非法发布，盗用他人照片违法行为，本站不负相关法律责任</p>
+		</div>
+	</div>
+
+	<section class="window show_tip">
+		<form action="javascript:;">
+			<div>
+				<p>分类名称</p>
+				<input name="name" type="text">
+				<em><i></i>不超过20个字符</em>
+				<em class="question-error"><i></i>分类名为空，请输入名字</em>
+			</div>
+		</form>
+	</section>
+	<p class="del_fri">是否确认删除该分类？</p>
+	<!-- 移动 -->
+	<section class="window move_win">
+		<form action="javascript:;">
+			<!-- 主目录 -->
+			<div>
+				<p>移动至</p>
+				<select name="" id="where" class="where">
+					<option value="0"></option>
+					<option value="1">相册展示</option>
+					<option value="2">相册存放</option>
+				</select>
+			</div>
+			<!-- 一级目录 -->
+			<div class="under">
+				<select name="" id="w1" class="first_file w1">
+					<option value="0"></option>
+					<option value="1">相册展示</option>
+					<option value="2">相册展示</option>
+				</select>
+			</div>
+		</form>
+	</section>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

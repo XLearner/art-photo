@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>忘记密码</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<header class="tit">
+		<img src="images/bg_img1.png">
+		<p>全民艺术摄影作品展示馆</p>
+	</header>
+
+	<div class="login_box forget_box">
+		<div class="head">
+			<p>忘记密码</p>
+		</div>
+		<div class="con">
+			<!-- ======================================= 账号密码登录 ================================================= -->
+			<section class="form form_invite form_forget">
+				<form action="javascript:;">
+					<section>
+						<div class="input"><i><img src="images/lg_username.png"></i><input type="text" name="username" placeholder="请输入账号"></div>
+						<div class="error">
+							<span class="username-error">该账户不存在，请重新输入</span>
+						</div>
+					</section>
+				</form>
+			</section>
+		</div>
+		<a href="javascript:;" class="login_btn">确定</a>
+		<a href="login.html" class="register">返回登录</a>
+	</div>
+</body>
+<script type="text/javascript">
+	// 输入值时 错误提示消失
+	$('.input input').on('input', function(){
+		$(this).parent().removeClass('error-border').siblings().find('span').hide();
+	})
+
+	// 邀请码验证
+	$('.login_btn').click(function(){
+		if ($('[name="username"]').val() == '') {
+			$('.username-error').show();
+			$('[name="username"]').parent().addClass('error-border');
+		}else{
+			$('.username-error').hide();
+			$('[name="username"]').parent().removeClass('error-border');
+		}
+	});
+</script>
+</html>

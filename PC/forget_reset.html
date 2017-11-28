@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app=capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+	<title>忘记密码-重置密码</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+</head>
+<body>
+	<!-- 背景图 -->
+	<div class="bg forget_bg"></div>
+	<!-- register main -->
+	<div class="login_main">
+		<div class="box clear">
+			<div class="img forget_m fl"></div>
+			<div class="menu fl">
+				<div class="forget_1_box forget_3_box">
+					<h1 class="tit">全民艺术摄影作品展示馆</h1>
+					<section class="form">
+						<form action="javascript:;">
+							<div class="pwd">
+								<input type="password" name="password_null" placeholder="请设置新密码">
+								<em><i></i>首字母+数字/字母，至少6位</em>
+								<em class="password_null-error"><i></i>密码格式不正确，请重新输入</em>
+							</div>
+							<div class="sure_pwd">
+								<input type="password" name="password_alike" placeholder="请确认密码">
+								<em class="password_alike-error"><i></i>两次输入密码不一致，请重新输入</em>
+							</div>
+							<a href="javascript:;" class="login_btn">确定</a>
+							<a href="login.html">返回登录</a>
+						</form>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- register main end -->
+</body>
+<script type="text/javascript">
+	// 验证密码
+	$("[name='password_null']").blur(function(){
+		if(!$("[name='password_null']").check_password()){
+            $('.password_null-error').show();
+		}else{
+			$('.password_null-error').hide();
+		}
+	});
+	// 验证二次密码
+	$("[name='password_alike']").blur(function(){
+		if(!$("[name='password_alike']").check_password_alike("[name='password_null']")){
+            $('.password_alike-error').show();
+		}else{
+			$('.password_alike-error').hide();
+		}
+	});
+	// 登录按钮
+	$('.login_btn').click(function(){
+		if($("[name='password_null']").val() == ''){
+			$('.password_null-error').show();
+		}else if($("[name='password_alike']").val() == ''){
+			$('.password_alike-error').show();
+		}
+	});
+</script>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app=capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+	<title>个人中心-我的邀请码</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body>
+	<div class="header self">
+		<div class="menu con clear">
+			<h1 class="tit fl">全民艺术摄影作品展示馆</h1>
+			<a href="javascript:;" class="logout fr"><i></i><span>退出登录</span></a>
+		</div>
+	</div>
+	<!-- breadcrumb -->
+	<div class="breadcrumb w">
+		<div class="con clear">
+			<ul>
+				<li><a href="index.html"><i></i><span>首页</span></a>/</li>
+				<li><a href="self.html"><span>个人中心</span></a>/</li>
+				<li><span>我的邀请码</span></li>
+			</ul>
+		</div>
+	</div>
+	<!-- breadcrumb end -->
+	<div class="self_con w">
+		<div class="con clear">
+			<div class="menu fl">
+				<ul class="box">
+					<li></li>
+					<li><a href="self.html">个人资料</a></li>
+					<li><a href="self_reset.html">修改密码</a></li>
+					<li><a href="self_space.html">个人空间链接</a></li>
+					<li class="on"><a href="self_invite.html">我的邀请码</a></li>
+					<li><a href="self_level.html">会员等级介绍</a></li>
+					<li><a href="self_connect.html">联系客服</a></li>
+				</ul>
+			</div>
+			<div class="wrap fr">
+				<h1 class="tit">我的邀请码</h1>
+				<div class="invite">
+					<p><span class="invite_num">123456</span><a href="javascript:;" class="modify_invite">修改&gt;</a></p>
+				</div>
+				<div class="ban_fun">
+					<p>
+						请联系客服开通该部分功能
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="window">
+		<form action="javascript:;">
+			<div>
+				<p>编辑邀请码</p>
+				<input type="text" name="invite_new">
+				<em><i></i>提示：6位数字</em>
+				<em class="password-error"><i></i>与原邀请码一致，请重新输入</em>
+				<em class="question-error"><i></i>此邀请码已被占用，请重新输入</em>
+			</div>
+		</form>
+	</section>
+</body>
+<script type="text/javascript">
+// 修改邀请码
+	var close = $('.close');
+	var modify = $('.modify_invite');
+	var back = $('.back');
+	var cancel = $('input[type="button"]');
+	var num = $('.window [name="invite_new"]');
+	// $(num).attr('value', originNum);
+	//页面层
+	$(modify).click(function(){
+		var originNum = $('.invite_num').html();
+		$(num).val('');
+		// 隐藏提示
+  		$('.question-error').hide();
+  		$('.password-error').hide();
+		layer.open({
+		  title: ' ',
+		  type: 1,
+		  btn: ['确定', '取消'],
+		  skin: 'layui-layer-rim', //加上边框
+		  area: ['300px', '192px'], //宽高
+		  content: $('.window'),
+		  yes: function(index, layero){
+		  	var r = new RegExp(/^[0-9]{6}$/);
+		  	var result = r.test($('[name="invite_new"]').val());
+		  	if ($('[name="invite_new"]').val() == originNum) {
+		  		$('.question-error').hide();
+		  		$('.password-error').show();
+		  	}else if($('[name="invite_new"]').val() == 123123){
+		  		$('.password-error').hide();
+		  		$('.question-error').show();
+		  	}else if(!result){
+		  		$('.password-error').hide();
+		  	}else{
+		  		$('.invite_num').html($('[name="invite_new"]').val());
+		  		layer.close(index);
+		  	}
+		  }
+		});
+	});
+
+
+</script>
+</html>

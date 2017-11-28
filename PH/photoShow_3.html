@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>相册展示-文件夹</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/show.js"></script>
+</head>
+<body>
+	
+	<section class="register_box">
+		<div class="head">
+			<a href="photoShow_2.html" class="back_btn"></a>
+			<p>相册展示</p>
+		</div>
+	</section>
+
+	<!-- 头部信息 -->
+	<section class="q_header">
+		<div class="con clear">
+			<div class="img fl">
+				<img src="images/user.png">
+			</div>
+			<div class="info fr">
+				<p class="tit">猫的树</p>
+				<p class="stit">关注生活，热爱生活，分享生活中的美好，时光会走远，影像长存</p>
+			</div>
+			</div>
+	</section>
+
+	<!-- 内容区 -->
+	<section class="q_photoClassification_box ptShow_3">
+		<div class="q_photoClassification">
+			<div class="con">
+				<div class="btnBox">
+					<a href="javascript:;" class="btn clear_more">批量删除</a>
+					<a href="javascript:;" class="btn add">新建相册</a>
+				</div>
+				<ul class="list clear">
+					<li class="under">
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="javascript:;">
+								<div class="img">
+									<img src="images/auto_img.png">
+								</div>
+								<p class="tit">
+									<span class="name">.</span>
+									<span class="num"></span>
+								</p>
+							</a>
+							<div class="cover2"></div>
+							<div class="q_btnBox">
+								<a href="javascript:;" class="redit">编辑</a>
+								<a href="javascript:;" class="move">移动</a>
+								<a href="javascript:;" class="del">删除</a>
+							</div>
+						</div>
+						<div class="btnBox">
+							<div class="levelShow fl">
+								<p class="stit">等级：<span>A</span></p>
+								<p class="blings"></p>
+							</div>
+							<a href="javascript:;" class="edit fr"></a>
+						</div>
+					</li>
+					<li>
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="photoShow_4.html">
+								<div class="img">
+									<img src="images/auto_img.png">
+								</div>
+								<p class="tit">
+									<span class="name">香港摄影</span>
+									<span class="num"></span>
+								</p>
+							</a>
+							<div class="cover2 hide"></div>
+							<div class="q_btnBox hide">
+								<a href="javascript:;" class="redit">编辑</a>
+								<a href="javascript:;" class="move">移动</a>
+								<a href="javascript:;" class="del">删除</a>
+							</div>
+						</div>
+						<div class="btnBox">
+							<div class="levelShow fl">
+								<p class="stit">等级：<span>A</span></p>
+								<p class="blings"><i class="zap on"></i><i class="zap on"></i><i class="zap on"></i></p>
+							</div>
+							<a href="javascript:;" class="edit fr"></a>
+						</div>
+					</li>
+					<li>
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="photoShow_4.html">
+								<div class="img">
+									<img src="images/wall.jpg">
+								</div>
+								<p class="tit">
+									<span class="name">香港摄影</span>
+									<span class="num">(1)</span>
+								</p>
+							</a>
+							<div class="cover2 hide"></div>
+							<div class="q_btnBox hide">
+								<a href="javascript:;" class="redit">编辑</a>
+								<a href="javascript:;" class="move">移动</a>
+								<a href="javascript:;" class="del">删除</a>
+							</div>
+						</div>
+						<div class="btnBox">
+							<div class="levelShow fl">
+								<p class="stit">等级：<span>A</span></p>
+								<p class="blings"><i class="zap on"></i><i class="zap on"></i><i class="zap on"></i></p>
+							</div>
+							<a href="javascript:;" class="edit fr"></a>
+						</div>
+					</li>
+					<li>
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="javascript:;">
+								<div class="img">
+									<img src="images/wall.jpg">
+								</div>
+								<p class="tit">
+									<span class="name">香港摄影</span>
+									<span class="num"></span>
+								</p>
+							</a>
+							<div class="cover2 hide"></div>
+							<div class="q_btnBox hide">
+								<a href="javascript:;" class="redit">编辑</a>
+								<a href="javascript:;" class="move">移动</a>
+								<a href="javascript:;" class="del">删除</a>
+							</div>
+						</div>
+						<div class="btnBox">
+							<div class="levelShow fl">
+								<p class="stit">等级：<span>A</span></p>
+								<p class="blings"></p>
+							</div>
+							<a href="javascript:;" class="edit fr"></a>
+						</div>
+					</li>
+					<li>
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="javascript:;">
+								<div class="img">
+									<img src="images/wall.jpg">
+								</div>
+								<p class="tit">
+									<span class="name">香港摄影</span>
+									<span class="num"></span>
+								</p>
+							</a>
+							<div class="cover2 hide"></div>
+							<div class="q_btnBox hide">
+								<a href="javascript:;" class="redit">编辑</a>
+								<a href="javascript:;" class="move">移动</a>
+								<a href="javascript:;" class="del">删除</a>
+							</div>
+						</div>
+						<div class="btnBox">
+							<div class="levelShow fl">
+								<p class="stit">等级：<span>A</span></p>
+								<p class="blings"></p>
+							</div>
+							<a href="javascript:;" class="edit fr"></a>
+						</div>
+					</li>
+					<li>
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="javascript:;">
+								<div class="img">
+									<img src="images/wall.jpg">
+								</div>
+								<p class="tit">
+									<span class="name">香港摄影</span>
+									<span class="num"></span>
+								</p>
+							</a>
+							<div class="cover2 hide"></div>
+							<div class="q_btnBox hide">
+								<a href="javascript:;" class="redit">编辑</a>
+								<a href="javascript:;" class="move">移动</a>
+								<a href="javascript:;" class="del">删除</a>
+							</div>
+						</div>
+						<div class="btnBox">
+							<div class="levelShow fl">
+								<p class="stit">等级：<span>A</span></p>
+								<p class="blings"></p>
+							</div>
+							<a href="javascript:;" class="edit fr"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- 批量删除控件 -->
+	<footer class="addFri-foot clear_more_btn">
+		<div class="footer hide">
+			<a href="javascript:;" class="clear_cancel">取消</a>
+			<a href="javascript:;" class="login_btn sure">删除</a>
+		</div>
+	</footer>
+
+
+	<!-- ======================================== 弹出层 ============================================ -->
+	<section class="window newF3">
+		<section class="register_box">
+			<div class="head">
+				<a href="javascript:;" class="back_btn cancel"></a>
+				<p>编辑</p>
+			</div>
+		</section>
+		<section class="addFri">
+			<form action="javascript:;">
+				<div class="box">
+					<p>相册名称</p>
+					<input name="name" type="text">
+				</div>
+				<div class="error">
+					<span class="tip">不超过20个字符</span>
+					<span class="name-error">相册名为空，请输入名字</span>
+					<!-- 命名重复，请重新输入名字 -->
+				</div>
+				<div class="box">
+					<p>等级</p>
+					<input name="level" type="text" placeholder="请输入A~Z中其中两个字母">
+				</div>
+				<div class="error">
+					<span class="password-error">请正确填写等级(A~Z中其中两个字母)</span>
+					<!-- 命名重复，请重新输入名字 -->
+				</div>
+				<div class="box">
+					<p>符号</p>
+					<div class="icons">
+						<div>
+							<i class="sunny"></i><i class="sunny"></i><i class="sunny"></i><i class="sunny"></i><i class="sunny"></i><i class="sunny"></i><i class="sunny"></i>
+						</div>
+						<div>
+							<i class="diamond"></i><i class="diamond"></i><i class="diamond"></i><i class="diamond"></i><i class="diamond"></i><i class="diamond"></i><i class="diamond"></i>
+						</div>
+						<div>
+							<i class="crescent_moon"></i><i class="crescent_moon"></i><i class="crescent_moon"></i><i class="crescent_moon"></i><i class="crescent_moon"></i><i class="crescent_moon"></i><i class="crescent_moon"></i>
+						</div>
+						<div>
+							<i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i>
+						</div>
+						<div>
+							<i class="zap"></i><i class="zap"></i><i class="zap"></i><i class="zap"></i><i class="zap"></i><i class="zap"></i><i class="zap"></i>
+						</div>
+						<div>
+							<i class="heart"></i><i class="heart"></i><i class="heart"></i><i class="heart"></i><i class="heart"></i><i class="heart"></i><i class="heart"></i>
+						</div>
+						<div>
+							<i class="rose"></i><i class="rose"></i><i class="rose"></i><i class="rose"></i><i class="rose"></i><i class="rose"></i><i class="rose"></i>
+						</div>
+					</div>
+				<div class="error">
+					<span class="tip">符号总数不得超过七位</span>
+					<!-- 命名重复，请重新输入名字 -->
+				</div>
+				</div>
+			</form>
+		</section>
+
+		<footer class="addFri-foot">
+			<div class="footer">
+				<a href="javascript:;" class="cancel">取消</a>
+				<a href="javascript:;" class="login_btn sure">确定</a>
+			</div>
+		</footer>
+	</section>
+
+
+		<!-- 收藏层 -->
+	<section class="window collectF">
+		<section class="register_box">
+			<div class="head">
+				<a href="javascript:;" class="back_btn cancel"></a>
+				<p>移动</p>
+			</div>
+		</section>
+		<section class="moveF">
+			<form action="javascript:;">
+				<!-- 主目录 -->
+				<div>
+					<p>移动至</p>
+					<select name="first_m" id="where" class="where">
+						<option value="0"></option>
+						<option value="1">相册展示</option>
+						<option value="2">相册存放</option>
+					</select>
+				</div>
+				<!-- 一级目录 -->
+				<div class="under ">
+					<select name="sec_m" class="first_file">
+						<option value="0"></option>
+					</select>
+				</div>
+			</form>
+		</section>
+
+		<footer class="addFri-foot">
+			<div class="footer">
+				<a href="javascript:;" class="cancel">取消</a>
+				<a href="javascript:;" class="login_btn sure">确定</a>
+			</div>
+		</footer>
+	</section>
+
+
+</body>
+<script type="text/javascript">
+	// 记录添加次数
+	var count = 0;
+	// 主菜单选择监听
+	$('[name=first_m]').change(function(){
+		$(this).parent().nextAll().not('.under').remove();
+		var v = $(this).val();
+		var sel_clone = $('.moveF .under').clone(true).removeClass('under').addClass('w' + count++);
+		if(v == 1){
+			// 一级菜单选项
+			// 获取第一个选项模板
+			for (var i = 0; i < 3; i++) { // 此处长度可更换
+				var selEle = sel_clone.find('option').eq(0).clone();
+				$(selEle).html('一级相册展示');
+				$(selEle).attr('value', i+1);
+				sel_clone.find('.first_file').append(selEle);
+			}
+
+			// 移除已有二级选项
+			$(this).parents('form').find('.w'+(--count)).remove();
+			// 添加二级选项卡
+			$(this).parents('form').append(sel_clone);
+		}else if($(this).val() == 2){
+			// 获取第一个选项模板
+			for (var i = 0; i < 3; i++) { // 此处长度可更换
+				var selEle = sel_clone.find('option').eq(0).clone();
+				$(selEle).html('一级相册存放');
+				$(selEle).attr('value', i+1);
+				sel_clone.find('.first_file').append(selEle);
+			}
+
+			// 移除已有二级选项
+			$(this).parents('form').find('.w'+(--count)).remove();
+			// 添加二级选项卡
+			$(this).parents('form').append(sel_clone);
+		}else if($(this).val() == 0){
+			// 移除已有二级选项
+			$(this).parents('form').find('.w'+(--count)).remove();
+		}
+	});
+
+	// 二级
+	// 二级选项卡监听事件
+	$('.first_file').change(function(){
+		var that = $(this);
+		that.parent().nextAll().not('.under').remove();
+		var formL = that.parents('form');
+		var div_clone = $('.moveF .under').clone().removeClass('under').addClass('x' + count++);
+		if($(this).val() == 1){
+			// 二级菜单选项
+			// 获取第一个选项模板
+			for (var i = 0; i < 3; i++) { // 此处长度可更换
+				var selEle = div_clone.find('option').eq(0).clone();
+				$(selEle).html('二级相册展示');
+				$(selEle).attr('value', i+1);
+				div_clone.find('.first_file').append(selEle);
+			}
+
+			div_clone.find('.first_file').css('display', 'block').attr('name', 'sel_sec');
+			// 移除已有二级选项
+			formL.find('.x'+(--count)).remove();
+			// 设置默认值
+			div_clone.find('.first_file').attr("value", '1');
+
+			formL.append(div_clone);
+		}else if($(this).val() == 2){
+			// 二级菜单选项
+			// 获取第一个选项模板
+			for (var i = 0; i < 3; i++) { // 此处长度可更换
+				var selEle = div_clone.find('option').eq(0).clone();
+				$(selEle).html('二级相册展示');
+				$(selEle).attr('value', i+1);
+				div_clone.find('.first_file').append(selEle);
+			}
+
+			div_clone.find('.first_file').css('display', 'block').attr('name', 'sel_sec');
+			// 移除已有二级选项
+			formL.find('.x'+(--count)).remove();
+			// 设置默认值
+			div_clone.find('.first_file').attr("value", '2');
+			formL.append(div_clone);
+		}
+	});
+
+
+	// 等级选定
+	var star = $('.icons div');
+	var blings = '';
+	$(star).find('i').off('click').on('click', function(){
+		// 星星长度
+		var long = 7;
+
+		$(this).nextAll().removeClass('on');
+		var prevLi = $(this).prevAll();
+		var hasBling = $(this).parents('.icons').find('.on').length;
+		if($(this).hasClass('on')){
+			$(this).removeClass('on');
+		}else{
+			// 点亮前面的星星
+			for (var i = prevLi.length - 1; i >= 0; i--) {
+				if(hasBling < long){
+					if ($(prevLi[i]).hasClass('on')) {continue;}
+					$(prevLi[i]).addClass('on');
+					hasBling++;
+				}
+			}
+			// 判断能否点亮自己
+			if(hasBling < long){
+				$(this).addClass('on');
+				hasBling++;
+			}
+		}
+		blings = $('.icons').find('.on').clone();
+	});
+</script>
+</html>

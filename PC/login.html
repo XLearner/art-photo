@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app=capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+	<title>登录</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+</head>
+<body>
+	<!-- 背景图 -->
+	<div class="bg"></div>
+	<!-- login main -->
+	<div class="login_main">
+		<div class="box login_first clear">
+			<h1 class="tit">全民艺术摄影作品展示馆</h1>
+			<div class="img fl">
+				<div class="login_box forget_1_box">
+					<h2 class="tit">账号密码登录</h2>
+					<section class="form">
+						<form action="javascript:;">
+							<div>
+								<input type="text" name="invite_num" placeholder="请输入邀请码">
+								<em class="question-error"><i></i>邀请码无效，请重新输入</em>
+							</div>
+							<a href="javascript:;" class="login_btn code_sure">确定</a>
+						</form>
+					</section>
+				</div>
+			</div>
+			<div class="menu fl">
+				<div class="login_box">
+					<h2 class="tit">账号密码登录</h2>
+					<section class="form">
+						<form action="javascript:;">
+							<div class="username">
+								<i></i>
+								<input type="text" name="username" placeholder="请输入账号">
+								<em class="ID-error"><i></i>登录账户有误，请重新登录</em>
+							</div>
+							<div class="pwd">
+								<i></i>
+								<input type="password" name="password" placeholder="请输入密码">
+								<em class="password-error"><i></i>登录密码有误，请重新登录</em>
+								<a href="forget.html" class="fg_pwd">忘记密码?</a>
+							</div>
+							<a href="javascript:;" class="login_btn">登录</a>
+							<a href="register.html">立即注册</a>
+						</form>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- login main end -->
+</body>
+<script type="text/javascript">
+	// 登录按钮
+	$(".menu .login_btn").click(function(event) {
+        if ($("[name='username']").val()==""){
+        	$('.ID-error').show();
+        } else {
+        	$('.ID-error').hide();
+        }
+        if( !$("[name='password']").check_password() ){
+            $('.password-error').show();
+        }else{
+            $('.password-error').hide();
+        }
+    });
+    $(document).keydown(function(event){
+    	if(event.keyCode == 13){
+    		$(".menu .login_btn").click();
+    	}
+    });
+
+    // 验证邀请码
+	$(".forget_1_box .login_btn").click(function(){
+		if($("[name='invite_num']").val() == ''){
+			$('.question-error').show();
+		}else{
+			$('.question-error').hide();
+		}
+	});
+
+	$("[name='password']").on('input propertychange', function(){
+		$('.password-error').hide();
+	})
+</script>
+</html>

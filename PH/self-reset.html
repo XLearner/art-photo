@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>个人中心-密保问题</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="register_box">
+		<div class="head">
+			<a href="self.html" class="back_btn"></a>
+			<p>修改密码</p>
+		</div>
+	</section>
+
+	<!-- reset -->
+	<section class="self-name self-reset">
+		<div class="con">
+			<div class="head">
+				<div class="step">1</div>
+				<p>密保问题</p>
+			</div>
+			<section class="form">
+				<form action="javascript:;">
+					<table>
+						<tr>
+							<td><p>旧密码：</p></td>
+							<td><input type="password" name="password" placeholder="请输入旧密码"></td>
+						</tr>
+						<tr>
+							<td><p></p></td>
+							<td><div class="error"><span class="password-error">旧密码输入错误</span></div></td>
+						</tr>
+						<tr>
+							<td><p>密保问题：</p></td>
+							<td><input type="text" name="question" value="我的小学名字" readonly="readonly"></td>
+						</tr>
+						<tr>
+							<td><p></p></td>
+							<td><div class="error"></div></td>
+						</tr>
+						<tr>
+							<td><p>密保答案：</p></td>
+							<td><input type="text" name="answer" placeholder="请输入密保答案"></td>
+						</tr>
+						<tr>
+							<td><p></p></td>
+							<td><div class="error"><span class="question-error">密保答案不正确，请重新输入</span></div></td>
+						</tr>
+					</table>
+					<a href="javascript:;" class="login_btn">下一步</a>
+				</form>
+			</section>
+		</div>
+	</section>
+</body>
+<script type="text/javascript">
+	$('.login_btn').click(function(){
+		// 旧密码验证
+		if(!$('[name="password"]').check_password()) {
+			$('.password-error').show();
+		}else {
+			$('.password-error').hide();
+		}
+
+		// 密保答案验证
+		if($('[name="answer"]').val() == ''){
+			$('.question-error').show();
+		}else{
+			$('.question-error').hide();
+		}
+	});
+</script>
+</html>

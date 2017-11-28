@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>我的好友-好友列表</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="register_box">
+		<div class="head">
+			<a href="fri-list.html" class="back_btn"></a>
+			<p>好友资料</p>
+		</div>
+	</section>
+
+	<!-- con -->
+	<section class="fri-detail">
+		<div class="head friend-list">
+			<div class="box clear">
+				<div class="img fl"><img src="images/user.png"></div>
+				<div class="text fl">
+					<span class="name">加勒比强盗</span><span class="level high_mem">高级会员</span>
+				</div>
+				<a href="javascript:;" class="btn fr">查看空间</a>
+			</div>
+		</div>
+
+		<div class="txt">
+			<ul>
+				<li><span class="stit">用户ID</span><p>123123</p></li>
+				<li><span class="stit">个性签名</span><p>个案例卡就是地方；俺第三空间发那科大家发挥空间哈数控刀具发</p></li>
+			</ul>
+		</div>
+	</section>
+
+	<footer>
+		<div class="footer">
+			<a href="javascript:;" class="login_btn fl delZ">删除</a>
+			<a href="javascript:;" class="login_btn fr move">移动</a>
+		</div>
+	</footer>
+
+	<!-- 分组 -->
+	<section class="window">
+		<section class="login_box register_box">
+			<div class="head">
+				<a href="javascript:;" class="back_btn cancel"></a>
+				<p>移动好友</p>
+			</div>
+		</section>
+		<section class="move_where">
+			<form action="javascript:;">
+				<p>移动至：</p>
+				<div class="drag">
+					<select name="where" id="">
+						<option value="0"></option>
+						<option value="1">家人</option>
+					</select>
+				</div>
+			</form>
+		</section>
+
+		<footer class="addFri-foot">
+			<div class="footer">
+				<a href="javascript:;" class="cancel">取消</a>
+				<a href="javascript:;" class="login_btn sure">确定</a>
+			</div>
+		</footer>
+	</section>
+</body>
+<script type="text/javascript">
+
+	// 删除弹窗
+	$('.delZ').click(function(){
+		var that = $(this);
+		layer.open({
+			type: 1,
+			btn: ['确定', '取消'],
+			content: '是否确认删除该好友?',
+			yes: function(index){
+
+				layer.close(index);
+			}
+		});
+	});
+
+	// 移动弹窗
+	$('.move').click(function(){
+		// 显示弹出层
+		$('.window').addClass('on');
+		// 清空表单
+		$('select').val('0');
+
+		$('.edit').attr('on', '0');
+		$('.edit').text('编辑');
+
+	});
+
+	// 弹窗消失
+	$('.cancel').click(function(){
+		$('.window').removeClass('on');
+	});
+
+	// 确认添加分组
+	$('.sure').click(function(){
+		var name = $('select').val();
+		if(name != '0'){
+			$('.window').removeClass('on');
+		}
+	});
+</script>
+</html>

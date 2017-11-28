@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>登录</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<header class="tit">
+		<img src="images/bg_img1.png">
+		<p>全民艺术摄影作品展示馆</p>
+	</header>
+
+	<div class="login_box">
+		<div class="head">
+			<a href="login_invite.html">邀请码登录</a>
+			<a href="login.html" class="on">账号密码登录</a>
+		</div>
+		<div class="con">
+			<!-- ======================================= 账号密码登录 ================================================= -->
+			<section class="form form_normal">
+				<form action="javascript:;">
+					<section>
+						<div class="input"><i><img src="images/lg_username.png"></i><input type="text" name="username" placeholder="请输入账号"></div>
+						<div class="error">
+							<span class="username-error">登录账户有误，请重新输入</span>
+						</div>
+					</section>
+					<section>
+						<div class="input"><i><img src="images/lg_pwd.png"></i><input type="password" name="password" placeholder="请输入密码"></div>
+						<div class="error">
+							<span class="password-error">登录密码有误，请重新输入</span>
+						</div>
+						<a href="forget_pwd.html" class="forget_pwd_btn">忘记密码</a>
+					</section>
+					<a href="register.html" class="register">立即注册&gt;</a>
+				</form>
+			</section>
+		</div>
+		<a href="javascript:;" class="login_btn">登录</a>
+	</div>
+</body>
+<script type="text/javascript">
+	// 登录方式切换
+	$('.head a').click(function(){
+		// 初始化表单
+		$('.error span').hide();
+		$('.input').removeClass('error-border');
+		$('.input input').val('');
+	})
+
+	$('.login_btn').click(function(){
+		// 验证账号
+		if(!$('[name="username"]').check_username()){
+			$('.username-error').show();
+			$('[name="username"]').parent().addClass('error-border');
+		}else{
+			$('.username-error').hide();
+			$('[name="username"]').parent().removeClass('error-border');
+		}
+
+		// 验证密码
+		if(!$('[name="password"]').check_password()){
+			$('.password-error').show();
+			$('[name="password"]').parent().addClass('error-border');
+		}else{
+			$('.password-error').hide();
+			$('[name="password"]').parent().removeClass('error-border');
+		}
+	});
+
+	// 输入值时 错误提示消失
+	$('.input input').on('input', function(){
+		$(this).parent().removeClass('error-border').siblings().find('span').hide();
+	});
+
+</script>
+</html>

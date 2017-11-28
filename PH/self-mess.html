@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>个人中心-个人资料</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="register_box">
+		<div class="head">
+			<a href="self.html" class="back_btn"></a>
+			<p>个人中心</p>
+		</div>
+	</section>
+
+	<!-- menu -->
+	<section class="self-menu self_mess">
+		<ul>
+			<li class="first"><a href="javascript:;" class="file">
+				<span class="name">会员头像</span>
+				<div class="img">
+					<img src="images/user.png">
+				</div>
+				<i class="right_i"></i>
+			</a>
+			<input type="file" name="file" class="asdf">
+		</li>
+			<li><a href="javascript:;">
+				<span class="name">会员等级</span>
+				<div class="level normal_mem fl">普通会员</div>
+				<i class="during self_stxt">联系客服开通高级会员</i>
+			</a></li>
+			<li><a href="javascript:;">
+				<span class="name">会员账号</span>
+				<i class="txt self_stxt">666666</i>
+			</a></li>
+			<li><a href="self_mess_name.html">
+				<span class="name">会员名称</span>
+				<i class="right_i"></i>
+				<i class="txt self_stxt fr">猫的树</i></a></li>
+			<li><a href="self_mess_phone.html">
+				<span class="name">手机号码</span>
+				<i class="right_i"></i>
+				<i class="txt self_stxt fr">13112311231</i></a></li>
+			<li><a href="self_mess_motto.html">
+				<span class="name">个性签名</span>
+				<i class="right_i"></i>
+			</a></li>
+		</ul>
+	</section>
+</body>
+<script type="text/javascript">
+	// 头像
+	$('.file').click(function(){
+		$('[name="file"]').click();
+	});
+
+	var img = new Image();
+
+	$('[type="file"]').change(function(){
+		// 创建画布
+		var canvas = document.createElement('canvas');
+		var context = canvas.getContext('2d');
+
+		var reader = new FileReader();
+		console.log(reader)
+	});
+
+</script>
+</html>

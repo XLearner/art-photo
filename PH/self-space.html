@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>个人中心-个人空间链接</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="register_box">
+		<div class="head">
+			<a href="self.html" class="back_btn"></a>
+			<p>个人空间链接</p>
+		</div>
+	</section>
+
+	<!-- menu -->
+	<section class="self-name self-space">
+		<div class="con">
+			<section class="form">
+				<form action="javascript:;">
+					<div class="link">
+						<textarea name="link" id="" cols="30" rows="3" readonly="readonly">http://was;ldkfhaiushfjasdbfuiweqhfa;kljfhqweifhijdshbf</textarea>
+					</div>
+					<p>请复制后，同时提供邀请码给您的朋友登录</p>
+					<a href="javascript:;" class="login_btn">复制</a>
+				</form>
+			</section>
+		</div>
+	</section>
+</body>
+<script type="text/javascript">
+	$('.login_btn').click(function(){
+		layer.open({
+			content: '复制成功',
+			skin: 'msg',
+			time: 2
+		})
+	})
+</script>
+</html>

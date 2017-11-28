@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app=capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+	<title>忘记密码</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+</head>
+<body>
+	<!-- 背景图 -->
+	<div class="bg forget_bg"></div>
+	<!-- register main -->
+	<div class="login_main">
+		<div class="box clear">
+			<div class="img forget_m fl"></div>
+			<div class="menu fl">
+				<div class="forget_1_box">
+					<h1 class="tit">全民艺术摄影作品展示馆</h1>
+					<section class="form">
+						<form action="javascript:;">
+							<div>
+								<input type="text" name="username" placeholder="请输入账号">
+								<em class="password_null-error"><i></i>该账号不存在，请重新输入</em>
+							</div>
+							<a href="javascript:;" class="login_btn">确定</a>
+							<a href="login.html">返回登录</a>
+						</form>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- register main end -->
+</body>
+<script type="text/javascript">
+	$(".login_btn").click(function(event) {
+        if ($("[name='username']").val()==""){
+        	$('.password_null-error').show();
+        } else{
+            $('.password_null-error').hide();
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app=capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+	<title>个人中心-个人资料</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/style.js"></script>
+	<script src="js/layer/layer.js"></script>
+</head>
+<body>
+	<div class="header self">
+		<div class="menu con clear">
+			<h1 class="tit fl">全民艺术摄影作品展示馆</h1>
+			<a href="javascript:;" class="logout fr"><i></i><span>退出登录</span></a>
+		</div>
+	</div>
+	<!-- breadcrumb -->
+	<div class="breadcrumb w">
+		<div class="con clear">
+			<ul>
+				<li><a href="index.html"><i></i><span>首页</span></a>/</li>
+				<li><a href="self.html"><span>个人中心</span></a>/</li>
+				<li><span>个人资料</span></li>
+			</ul>
+		</div>
+	</div>
+	<!-- breadcrumb end -->
+	<div class="self_con w">
+		<div class="con clear">
+			<div class="menu fl">
+				<ul class="box">
+					<li></li>
+					<li class="on"><a href="self.html">个人资料</a></li>
+					<li><a href="self_reset.html">修改密码</a></li>
+					<li><a href="self_space.html">个人空间链接</a></li>
+					<li><a href="self_invite.html">我的邀请码</a></li>
+					<li><a href="self_level.html">会员等级介绍</a></li>
+					<li><a href="self_connect.html">联系客服</a></li>
+				</ul>
+			</div>
+			<div class="wrap fr">
+				<h1 class="tit">个人资料</h1>
+				<div class="message">
+					<section class="form">
+						<form action="javascript:;">
+							<ul>
+								<li>
+									<p class="stit">会员头像：</p>
+									<div class="img">
+										<img src="C:/Users/mrxd/Desktop/桌面文件/2.jpg" alt="">
+										<a href="javascript:;" class="modify">修改&gt;</a>
+										<input type="file" id="img" name="userPic">
+									</div>
+								</li>
+								<li>
+									<p class="stit">会员等级：</p>
+									<p>
+										<span class="high_mem">高级会员</span>
+									</p>
+									<p class="during">有效期至<span>2017-12-12</span></p>
+								</li>
+								<li>
+									<p class="stit">会员账号：</p>
+									<p>684591</p>
+								</li>
+								<li>
+									<p class="stit">会员名称：</p>
+									<input type="text" value="树的猫">
+								</li>
+								<li>
+									<p class="stit">手机号码：</p>
+									<input type="text" value="1861321565">
+								</li>
+								<li>
+									<p class="stit">个性签名：</p>
+									<textarea name="self_name" id="" cols="2" rows="5" placeholder="(不能超过28个字)"></textarea>
+									<em class="name-error"><i></i>个性签名字数不能超过28</em>
+								</li>
+								<li>
+									<p class="stit"></p>
+									<p class="btn">
+										<a href="javascript:;" class="login_btn">保存</a>
+										<a href="javascript:;" class="cancel_btn">取消</a>
+									</p>
+								</li>
+							</ul>
+						</form>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$('[name="self_name"]').on('input propertychange', function(){
+		if(this.value.length > 28){
+			$('.name-error').show();
+		}else{
+			$('.name-error').hide();
+		}
+	});
+</script>
+</html>

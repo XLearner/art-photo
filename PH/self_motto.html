@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>个人中心-个人资料-个性签名</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="login_box register_box">
+		<div class="head">
+			<a href="self-mess.html" class="back_btn">&lt;</a>
+			<p>个性签名</p>
+		</div>
+	</section>
+
+	<!-- menu -->
+	<section class="self-name">
+		<section class="form">
+			<form action="javascript:;">
+				<div class="input">
+					<textarea name="motto" cols="10" rows="2" placeholder="(不超过28个字)"></textarea>
+				</div>
+				<p class="tip">(<span class="last">28</span>/28)</p>
+				<a href="javascript:;" class="login_btn">保存</a>
+			</form>
+		</section>
+	</section>
+</body>
+<script type="text/javascript">
+	$('[name="motto"]').on('input propertychange', function(){
+		var num = parseInt($('.last').text());
+		num -= 1;
+		$('.last').text(num);
+		if (num < 0) {
+			$('.tip').css('color', 'red');
+		}
+	});
+</script>
+</html>

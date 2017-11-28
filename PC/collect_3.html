@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app=capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+	<title>相册存放-相册列表</title>
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript" src="js/show_3.js"></script>
+</head>
+<body>
+	<div class="header show">
+		<div class="menu con clear">
+			<h1 class="tit fl">全民艺术摄影作品展示馆</h1>
+			<a href="javascript:;" class="logout fr"><i></i><span>退出登录</span></a>
+		</div>
+	</div>
+	<!-- breadcrumb -->
+	<div class="breadcrumb w">
+		<div class="con clear">
+			<ul>
+				<li><a href="index.html"><i></i><span>首页</span></a>/</li>
+				<li><a href="collect.html"><span>相册存放</span></a>/</li>
+				<li><a href="collect_2.html"><span>目录</span></a>/</li>
+				<li><span>相册列表</span></li>
+			</ul>
+		</div>
+	</div>
+	<!-- breadcrumb end -->
+	<!-- show head -->
+	<div class="show_head w">
+		<div class="con clear">
+			<div class="img fl"><img src="images/first/user.png" alt=""></div>
+			<div class="txt fl">
+				<div class="name">猫的树</div>
+				<div class="text">关注生活，热爱生活，那是多久回来赛的机会</div>
+			</div>
+		</div>
+	</div>
+	<!-- show head end -->
+	<!-- show box -->
+	<div class="show_box w">
+		<div class="con">
+			<div class="box">
+				<div class="clear">
+					<a href="javascript:;" class="clear_more fl">批量删除</a>
+					<div class="fr">
+						<span class="del">删除</span>
+						<span class="cancel">取消</span>
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="show_third">
+						<ul class="menu">
+							<li>
+								<a href="javascript:;" class="add">
+									<div class="img"><img src="images/first/auto_img.png" alt=""></div>
+									<p>添加相册</p>
+								</a>
+							</li>
+							<li class="under">
+								<div class="pic">
+									<div class="select">
+										<i></i>
+										<input type="text" value="0">
+									</div>
+									<a href="collect_4.html">
+										<div class="tit"><span class="stit">.</span><span class="num"></span></div>
+										<div class="img"><img src="images/first/wall.jpg" alt=""></div>
+									</a>
+									<div class="btn">
+										<div class="tit">作品名称：<span class="stit">香港摄影</span><span class="num"></span></div>
+										<div class="level">
+											<p>等级: <span>A</span></p>
+											<div class="bling"><div class="crescent_moon"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+										</div>
+										<div>
+											<span class="edit">编辑</span>
+											<span class="move">移动</span>
+											<span class="del">删除</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="pic">
+									<div class="select">
+										<i></i>
+										<input type="text" value="0">
+									</div>
+									<a href="collect_4.html">
+										<div class="img"><img src="images/first/1.jpg" alt=""></div>
+									</a>
+									<div class="btn">
+										<div class="tit">作品名称：<span class="stit">香港摄影</span><span class="num"></span></div>
+										<div class="level">
+											<p>等级: <span>A</span></p>
+											<div class="bling"><div class="crescent_moon"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+										</div>
+										<div>
+											<span class="edit">编辑</span>
+											<span class="move">移动</span>
+											<span class="del">删除</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="pic">
+									<div class="select">
+										<i></i>
+										<input type="text" value="0">
+									</div>
+									<a href="collect_4.html">
+										<div class="img"><img src="images/first/wall.jpg" alt=""></div>
+									</a>
+									<div class="btn">
+										<div class="tit">作品名称：<span class="stit">香港摄影</span><span class="num"></span></div>
+										<div class="level">
+											<p>等级: <span>A</span></p>
+											<div class="bling"><div class="crescent_moon"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+										</div>
+										<div>
+											<span class="edit">编辑</span>
+											<span class="move">移动</span>
+											<span class="del">删除</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- show box end-->
+	<!-- footer -->
+	<div class="footer show_foot">
+		<div class="con">
+			<p>本站内容均由会员提供，请会员安全使用相册，禁止涉嫌非法发布，盗用他人照片违法行为，本站不负相关法律责任</p>
+		</div>
+	</div>
+
+	<section class="window show_tip show_tip_third">
+		<form action="javascript:;">
+			<div>
+				<p>相册名称</p>
+				<input name="name" type="text">
+				<em><i></i>不超过20个字符</em>
+				<em class="question-error"><i></i>相册名为空，请输入名字</em>
+				<em class="name-error"><i></i>命名重复，请重新输入名字</em>
+			</div>
+			<div>
+				<p>等级</p>
+				<input name="level" type="text">
+				<em><i></i>请输入A~Z中任意两个字母</em>
+				<em class="password-error"><i></i>请填写等级或者选择等级符号</em>
+			</div>
+			<div>
+				<p>符号</p>
+				<div class="icons">
+					<div>
+						<i class="sunny"></i><i class="sunny"></i><i class="sunny"></i><i class="sunny"></i><i class="sunny"></i><i class="sunny"></i><i class="sunny"></i>
+					</div>
+					<div>
+						<i class="diamond"></i><i class="diamond"></i><i class="diamond"></i><i class="diamond"></i><i class="diamond"></i><i class="diamond"></i><i class="diamond"></i>
+					</div>
+					<div>
+						<i class="crescent_moon"></i><i class="crescent_moon"></i><i class="crescent_moon"></i><i class="crescent_moon"></i><i class="crescent_moon"></i><i class="crescent_moon"></i><i class="crescent_moon"></i>
+					</div>
+					<div>
+						<i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i><i class="star"></i>
+					</div>
+					<div>
+						<i class="zap"></i><i class="zap"></i><i class="zap"></i><i class="zap"></i><i class="zap"></i><i class="zap"></i><i class="zap"></i>
+					</div>
+					<div>
+						<i class="heart"></i><i class="heart"></i><i class="heart"></i><i class="heart"></i><i class="heart"></i><i class="heart"></i><i class="heart"></i>
+					</div>
+					<div>
+						<i class="rose"></i><i class="rose"></i><i class="rose"></i><i class="rose"></i><i class="rose"></i><i class="rose"></i><i class="rose"></i>
+					</div>
+				</div>
+				<em><i></i>符号总数不得超过七位</em>
+			</div>
+		</form>
+	</section>
+	<p class="del_fri">是否确认删除该相册？</p>
+	<!-- 移动 -->
+	<section class="window move_win">
+		<form action="javascript:;">
+			<!-- 主目录 -->
+			<div>
+				<p>移动至</p>
+				<select name="sel_menu" id="where" class="where">
+					<option value="0"></option>
+					<option value="1">相册展示</option>
+					<option value="2">相册存放</option>
+				</select>
+			</div>
+			<!-- 一级目录 -->
+			<div class="under">
+				<select name="sel_" id="w1" class="first_file">
+					<option value="0"></option>
+				</select>
+			</div>
+		</form>
+	</section>
+</body>
+	<script type="text/javascript">
+		// 编辑
+		// 编辑
+		var edit = $('.edit');
+		$(edit).click(function(){
+			var that = $(this);
+			var originN = $(that).parents('li').find('.stit').text();
+			var originL = $(that).parents('li').find('.level span').text();
+			$('[name="name"]').val(originN);
+			$('[name="level"]').val(originL);
+			$('.window .question-error').hide();
+			$('.show_tip .password-error').hide();
+			$('.show_tip .name-error').hide();
+			// 清除星星
+			$('.icons div').parent().find('i').removeClass('on');
+			$('.show_tip').find('[name="level"]').attr('disabled', false);
+			// 等级选定
+			var star = $('.icons div');
+			var blings = '';
+			$(star).find('i').unbind('click').bind('click', function(){
+				var level = $(this).parents('form').find('[name="level"]').val();
+				var long = 7;
+				
+				$(this).nextAll().removeClass('on');
+				var prevLi = $(this).prevAll();
+				var hasBling = $(this).parents('.icons').find('.on').length;
+				if($(this).hasClass('on')){
+					$(this).removeClass('on');
+				}else{
+					// 点亮前面的星星
+					for (var i = prevLi.length - 1; i >= 0; i--) {
+						if(hasBling < long){
+							if ($(prevLi[i]).hasClass('on')) {continue;}
+							$(prevLi[i]).addClass('on');
+							hasBling++;
+						}
+					}
+					// 判断能否点亮自己
+					if(hasBling < long){
+						$(this).addClass('on');
+						hasBling++;
+					}
+				}
+				
+				blings = $('.icons').find('.on').clone();
+			});
+			layer.open({
+				title: ' ',
+				type: 1,
+				btn: ['确定', '取消'],
+				skin: 'layui-layer-rim', //加上边框
+				area: ['300px', '439px'], //宽高
+				content: $('.show_tip_third'),
+				yes: function(index, layero){
+					var name = $('[name="name"]').val();
+					var level = $('[name="level"]').val();
+		            var searchF = searchFiles($(that).parents('li').siblings(), name);
+					// 隐藏不需要的提示
+					$('.show_tip .password-error').hide();
+					$('.show_tip_third .question-error').hide();
+					if(judgeLevel(name, level, blings)){
+						$(that).parents('li').find('.tit .stit').text(name);
+		            	// $(that).parents('li').find('.tit .num').text('');
+						$(that).parents('li').find('.level p span').text(level);
+						// 判断是否重名
+						if(!searchF.exist && originN != name){
+		                	$(that).parents('li').find('.tit .num').text('(' + searchF.count + ')');
+						}
+						
+						that.parents('li').find('.bling').html('').append(blings);
+						$('.show_tip_third .question-error').hide();
+						layer.close(index);
+					}else if($.trim(name) == ''){
+						$('.show_tip .question-error').show();
+					}else if(level == '' || blings == ''){
+						$('.show_tip .password-error').show();
+					}
+				}
+			});
+		});
+	var move = $('.move');
+	var move_where = $('.where');
+	</script>
+</html>

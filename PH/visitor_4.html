@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>游客-四级相册</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript" src="js/swiper-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.4.1.min.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/show.js"></script>
+</head>
+<body>
+	
+	<section class="register_box">
+		<div class="head">
+			<a href="visitor_3.html" class="back_btn"></a>
+			<p>游客-四级相册</p>
+		</div>
+	</section>
+
+	<!-- 头部信息 -->
+	<section class="q_header">
+		<div class="con clear">
+			<div class="img fl">
+				<img src="images/user.png">
+			</div>
+			<div class="info fr">
+				<p class="tit">猫的树</p>
+				<p class="stit">关注生活，热爱生活，分享生活中的美好，时光会走远，影像长存</p>
+			</div>
+			</div>
+	</section>
+
+	<!-- 内容区 -->
+	<section class="q_photoClassification_box ptShow_4">
+		<div class="q_photoClassification">
+			<div class="con">
+				<div class="btnBox">
+				</div>
+				<ul class="list clear">
+					<li class="under">
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="javascript:;">
+								<div class="img">
+									<img src="images/wall.jpg">
+									<video></video>
+								</div>
+								<p class="tit">
+								</p>
+							</a>
+						</div>
+					</li>
+					<li class="kind1">
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="javascript:;">
+								<div class="img">
+									<img src="images/1.jpg">
+								</div>
+							</a>
+						</div>
+					</li>
+					<li class="kind1">
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="javascript:;">
+								<div class="img">
+									<img src="images/wall.jpg">
+								</div>
+							</a>
+						</div>
+					</li>
+					<li class="kind1">
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="javascript:;">
+								<div class="img">
+									<img src="images/wall.jpg">
+								</div>
+							</a>
+						</div>
+					</li>
+					<li class="kind1">
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="javascript:;">
+								<div class="img">
+									<img src="images/wall.jpg">
+								</div>
+							</a>
+						</div>
+					</li>
+					<li class="kind1">
+						<div class="imgBox">
+							<div class="select">
+								<i></i>
+								<input type="text" value="0">
+							</div>
+							<a href="javascript:;">
+								<div class="img">
+									<img src="images/wall.jpg">
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ======================================== 弹出层 ============================================ -->
+	<section class="upWin">
+		<div class="form">
+			<form action="javascript:;">
+				<p class="tit">上传至<span>罗湖摄影</span></p>
+				<div class="img">
+					<img src="images/add_icon.png">
+					<p>添加图片</p>
+				</div>
+				<input type="file" name="file">
+				<div class="btn clear">
+					<a href="javascript:;" class="cancel fl">取消</a>
+					<a href="javascript:;" class="upload fr">开始上传</a>
+				</div>
+			</form>
+		</div>
+	</section>
+	<div class="shadow"></div>
+
+<!-- 图片查看 swiper -->
+	<div class="scanf">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide under">
+					<img src="">
+					<video controls="controls" -webkit-playsinline=true></video>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+
+// 图片查看
+
+    function initS(){
+    	$('.swiper-wrapper .swiper-slide').not('.under').remove();
+    	var imgs = $('.list .kind1 img');
+	    var slide_clone;
+	    for (var i = 0; i < imgs.length; i++) {
+	    	slide_clone = $('.swiper-wrapper .under').clone(true).removeClass('under');
+		    slide_clone.find('img').attr('src', $(imgs).eq(i).attr('src'));
+		    $('.swiper-wrapper').append(slide_clone);
+	    }
+	    var Mov = $('.kind2');
+	    if(Mov.length != 0){
+			slide_clone = $('.swiper-wrapper .under').clone(true).removeClass('under');
+		    slide_clone.find('img').hide();
+		    var src = Mov.find('video').attr('src');
+		    slide_clone.find('video').show().attr('src', src);
+
+		    $('.swiper-wrapper').append(slide_clone);
+	    }
+	    if(mySwiper){
+	    	mySwiper.update();
+	    }
+    }
+
+    initS();
+
+    var pic = $('.ptShow_4 .list li');
+
+    var viewH = $('.scanf .view');
+
+    pic.find('.img').on('click', function(event){
+    	$(document).on('touchmove', function(e){
+			if (event.cancelable) {
+		        // 判断默认行为是否已经被禁用
+		        if (!event.defaultPrevented) {
+		            event.preventDefault();
+		        }
+		    }
+		});
+        event.stopPropagation();
+        var that = $(this).parents('li');
+        var img = $(that).find('img').attr('src');
+        $('.scanf').show();
+
+        $('.shadow').show();
+        $('body').css('overflow', 'hidden');
+
+
+        mySwiper.update();
+        var slidTo = $.inArray(that[0], $('.list li').not('.under'));
+        mySwiper.slideTo(slidTo);
+
+        $('.shadow').off('click').on('click', function() {
+            $('.scanf').hide();
+            mySwiper.update();
+            $('.shadow').hide();
+	        $('body').css('overflow', 'auto');
+            that = null;
+            $(document).off('touchmove');
+        });
+
+        // 判断是图片还是视频
+        if(that.hasClass('kind2')){
+            var src = $(that).find('video').attr('src');
+            $('.scanf .view img').hide();
+            $('.scanf .view video').show();
+            $('.scanf .view video').attr('src', src);
+        }else{
+            img = $(that).find('img').attr('src');
+            $('.scanf .view img').attr('src', img);
+            $('.scanf .view img').show();
+            $('.scanf .view video').hide();
+        }
+    });
+
+	// 轮播图
+    var mySwiper = new Swiper('.swiper-container', {
+	    simulateTouch: false,
+	    // 如果需要前进后退按钮
+    });
+
+</script>
+</html>

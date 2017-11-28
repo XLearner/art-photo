@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>我的好友-消息列表</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="register_box">
+		<div class="head">
+			<a href="index.html" class="back_btn"></a>
+			<p>全部好友</p>
+		</div>
+	</section>
+
+	<!-- nav -->
+	<nav class="fri-nav">
+		<ul>
+			<li><a href="friend.html">全部好友</a></li>
+			<li><a href="fri-add.html">添加好友</a></li>
+			<li class="on"><a href="javascript:;">消息列表<i>2</i></a></li>
+		</ul>
+	</nav>
+
+	<!-- list -->
+	<section class="fri-mess">
+		<div class="con">
+			<ul>
+				<li>
+					<div class="time">2017-09-10</div>
+					<div class="man_box clear">
+						<div class="img fl"><img src="images/user.png"></div>
+						<div class="text fl">
+							<div class="txt">
+								<span class="name">猫的树1</span><span class="userId">(123123)</span><span class="level normal_mem">普通会员</span>
+							</div>
+							<div class="stxt">
+								发现生活点滴美好，分享所见到的每一个美丽的瞬间，分享美好
+							</div>
+						</div>
+					</div>
+					<div class="btn">
+						<a href="javascript:;" class="move">通过</a>
+						<a href="javascript:;" class="del">拒绝</a>
+						<p class="reply">.</p>
+					</div>
+				</li>
+				<li>
+					<div class="time">2017-09-10</div>
+					<div class="man_box clear">
+						<div class="img fl"><img src="images/user.png"></div>
+						<div class="text fl">
+							<div class="txt">
+								<span class="name">猫的树1</span><span class="userId">(123123)</span><span class="level high_mem">普通会员</span>
+							</div>
+							<div class="stxt">
+								发现生活点滴美好，分享所见到的每一个美丽的瞬间，分享美好
+							</div>
+						</div>
+					</div>
+					<div class="btn">
+						<a href="javascript:;" class="move">通过</a>
+						<a href="javascript:;" class="del">拒绝</a>
+						<p class="reply">.</p>
+					</div>
+				</li>
+				<li>
+					<div class="time">2017-09-10</div>
+					<div class="man_box clear">
+						<div class="img fl"><img src="images/user.png"></div>
+						<div class="text fl">
+							<div class="txt">
+								<span class="name">猫的树1</span><span class="userId">(123123)</span><span class="level normal_mem">普通会员</span>
+							</div>
+							<div class="stxt">
+								发现生活点滴美好，分享所见到的每一个美丽的瞬间，分享美好
+							</div>
+						</div>
+					</div>
+					<div class="btn">
+						<a href="javascript:;" class="move">通过</a>
+						<a href="javascript:;" class="del">拒绝</a>
+						<p class="reply">.</p>
+					</div>
+				</li>
+				<li>
+					<div class="time">2017-09-10</div>
+					<div class="man_box clear">
+						<div class="img fl"><img src="images/user.png"></div>
+						<div class="text fl">
+							<div class="txt">
+								<span class="name">猫的树1</span><span class="userId">(123123)</span><span class="level high_mem">普通会员</span>
+							</div>
+							<div class="stxt">
+								发现生活点滴美好，分享所见到的每一个美丽的瞬间，分享美好
+							</div>
+						</div>
+					</div>
+					<div class="btn">
+						<a href="javascript:;" class="move">通过</a>
+						<a href="javascript:;" class="del">拒绝</a>
+						<p class="reply">.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- 分组 -->
+	<section class="window">
+		<section class="login_box register_box">
+			<div class="head">
+				<a href="javascript:;" class="back_btn cancel"></a>
+				<p>分类好友</p>
+			</div>
+		</section>
+		<section class="move_where">
+			<form action="javascript:;">
+				<p>分类至：</p>
+				<div class="drag">
+					<select name="where" id="">
+						<option value="0"></option>
+						<option value="1">家人</option>
+					</select>
+				</div>
+			</form>
+		</section>
+
+		<footer class="addFri-foot">
+			<div class="footer">
+				<a href="javascript:;" class="cancel">取消</a>
+				<a href="javascript:;" class="login_btn sure">确定</a>
+			</div>
+		</footer>
+	</section>
+
+</body>
+<script type="text/javascript">
+	// 拒绝事件
+	$('.del').click(function(){
+		var that = $(this);
+		that.parent().find('a').hide();
+		that.siblings('.reply').text('已拒绝').show();
+	});
+
+	// 同意
+	$('.move').click(function(){
+		var that = $(this);
+		// 显示弹出层
+		$('.window').addClass('on');
+		// 清空表单
+		$('select').val('0');
+
+		// 确认添加分组
+		$('.sure').off('click').click(function(){
+			var name = $('select').val();
+			// yes
+			if(name != '0'){
+				$('.window').removeClass('on');
+				that.parent().find('a').hide();
+				that.siblings('.reply').text('已同意').show();
+			}
+		});
+	});
+
+	// 弹窗消失
+	$('.cancel').click(function(){
+		$('.window').removeClass('on');
+	});
+
+
+</script>
+</html>

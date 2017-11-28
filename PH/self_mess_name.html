@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>个人中心-个人资料-会员名称</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+</head>
+<body class="self_bg">
+
+	<section class="register_box">
+		<div class="head">
+			<a href="self-mess.html" class="back_btn"></a>
+			<p>会员名称</p>
+		</div>
+	</section>
+
+	<!-- menu -->
+	<section class="self-name">
+		<div class="con">
+			<section class="form">
+				<form action="javascript:;">
+					<div class="input">
+						<input type="text" name="name" value="猫的树" placeholder="会员名称(不超过12个字)">
+					</div>
+					<a href="javascript:;" class="login_btn">保存</a>
+				</form>
+			</section>
+		</div>
+	</section>
+</body>
+<script type="text/javascript">
+	$('.login_btn').click(function(){
+		var name = $('[name="name"]').val();
+
+		if(name == '' || name.length > 12){
+			layer.open({
+				skin: 'msg',
+				content: '会员名称输入有误，请重新输入',
+				time: 2
+			})
+		}
+	})
+</script>
+</html>

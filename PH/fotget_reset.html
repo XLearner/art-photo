@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>忘记密码-重置密码</title>
+	<script type="text/javascript" src="js/jquery1.9.1.js"></script>
+	<script type="text/javascript" src="js/jQuery.formcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<header class="tit">
+		<img src="images/bg_img1.png">
+		<p>全民艺术摄影作品展示馆</p>
+	</header>
+
+	<div class="login_box forget_r">
+		<div class="head">
+			<p>忘记密码</p>
+		</div>
+		<div class="con">
+			<!-- ======================================= 密保验证 ================================================= -->
+			<section class="form form_forget_q">
+				<form action="javascript:;">
+					<section>
+						<div class="input"><input type="password" name="password_null" placeholder="请设置新密码"></div>
+						<div class="error">
+							<span class="tip">首位字母+数字/字母，至少6位</span>
+							<span class="password_null-error">密码格式不正确，请重新输入</span>
+						</div>
+					</section>
+					<section>
+						<div class="input"><input type="password" name="password_alike" placeholder="请输入密保答案"></div>
+						<div class="error">
+							<span class="password_alike-error">密保答案不正确，请重新输入</span>
+						</div>
+					</section>
+				</form>
+			</section>
+		</div>
+		<a href="javascript:;" class="login_btn">提交</a>
+		<a href="login.html" class="register">返回登录</a>
+	</div>
+</body>
+<script type="text/javascript">
+	// 输入值时 错误提示消失
+	$('.input input').on('input', function(){
+		// 新密码
+		$('.password_null-error').siblings().show();
+		$('.password_null-error').hide();
+		$('[name="password_null"]').parent().removeClass('error-border');
+
+		// 确认密码
+		$('.password_alike-error').siblings().show();
+		$('.password_alike-error').hide();
+		$('[name="password_alike"]').parent().removeClass('error-border');
+	})
+
+	// 密保答案验证
+	$('.login_btn').click(function(){
+		// 验证密码
+		if(!$('[name="password_null"]').check_password()){
+			$('.password_null-error').siblings().hide();
+			$('.password_null-error').show();
+			$('[name="password_null"]').parent().addClass('error-border');
+		}else{
+			$('.password_null-error').siblings().show();
+			$('.password_null-error').hide();
+			$('[name="password_null"]').parent().removeClass('error-border');
+		}
+	});
+
+
+	// 确认密码
+	$('[name="password_alike"]').blur(function(){
+		var pwd = $('[name="password_null"]').val();
+		if($('[name="password_alike"]').val() != pwd){
+			$('.password_alike-error').show();
+			$('[name="password_alike"]').parent().addClass('error-border');
+		}else{
+			$('.password_alike-error').hide();
+			$('[name="password_alike"]').parent().removeClass('error-border');
+		}
+	});
+</script>
+</html>
